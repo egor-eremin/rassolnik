@@ -52,9 +52,16 @@
 	},
 	"dependencies": {
 		"@babel/polyfill": "7.0.0",
+		"intheviewport": "1.1.4",
 		"jquery": "3.3.1",
+		"jquery-mask-plugin": "1.14.15",
+		"jquery-plugin-viewport-checker": "1.8.3",
+		"jquery-validation": "1.19.0",
+		"magnific-popup": "1.1.0",
 		"ninelines-ua-parser": "1.1.6",
 		"normalize-css": "2.3.1",
+		"object-fit-images": "3.2.4",
+		"slick-carousel": "1.8.1",
 		"svg4everybody": "2.1.9"
 	}
 }

@@ -1,0 +1,89 @@
+mixin about-content
+		.about-decor
+			img(src="images/decor-about.jpg" alt="Декор")
+		.main-wrapper
+			.about-slider
+				.television-slider-wrapper
+					img.switch-television(src="images/switch.png" data-switch-index="" alt="Переключатель на телевизор")
+					.television-slider
+						.television-slider__item
+							img(src="images/slader-screen.jpg" alt="экран")
+						.television-slider__item
+							img(src="images/slader-screen.jpg" alt="экран")
+						.television-slider__item
+							img(src="images/slader-screen.jpg" alt="экран")
+				.about-text-slider
+					h2.main-title.main-title_about о ресторане
+					p.slider-text
+						| Приглашаем Вас окунуться
+						| в уютную атмосферу СССР
+						| 70-х годов
+					.fact-slider
+						.fact-slider__item
+							p.slider-paragraph
+								| Ресторан "Рассольник" - это
+								| импровизированная квартира
+								| интеллигентной советской
+								| семьи, располагающая к душевным
+								| беседам и веселым застольям.
+							a.btn.btn-about(href="#")
+								| Подробнее
+								| <svg class="svg-arrow-btn" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.97" viewBox="0 0 7.97 7.97">
+								| <defs>
+								|     <style>
+								|       .fill-btn-arrow {
+								|         fill: #fff;
+								|         fill-rule: evenodd;
+								|       }
+								|     </style>
+								|   </defs>
+								|   <path class="fill-btn-arrow" d="M1349.03,1496a1,1,0,0,1-.88-0.48,0.9,0.9,0,0,1,.39-1.27l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.27,1.051,1.051,0,0,1,1.36-.37l5.98,3.06a0.907,0.907,0,0,1,0,1.64l-5.98,3.06A1.023,1.023,0,0,1,1349.03,1496Z" transform="translate(-1348.03 -1488.03)"/>
+								| </svg>
+						.fact-slider__item
+							p.slider-paragraph
+								| Ресторан "Рассольник" - это
+								| импровизированная квартира
+								| интеллигентной советской
+								| семьи, располагающая к душевным
+								| беседам и веселым застольям.
+							a.btn.btn-about(href="#")
+								| Подробнее
+								| <svg class="svg-arrow-btn" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.97" viewBox="0 0 7.97 7.97">
+								| <defs>
+								|     <style>
+								|       .fill-btn-arrow {
+								|         fill: #fff;
+								|         fill-rule: evenodd;
+								|       }
+								|     </style>
+								|   </defs>
+								|   <path class="fill-btn-arrow" d="M1349.03,1496a1,1,0,0,1-.88-0.48,0.9,0.9,0,0,1,.39-1.27l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.27,1.051,1.051,0,0,1,1.36-.37l5.98,3.06a0.907,0.907,0,0,1,0,1.64l-5.98,3.06A1.023,1.023,0,0,1,1349.03,1496Z" transform="translate(-1348.03 -1488.03)"/>
+								| </svg>
+						.fact-slider__item
+							p.slider-paragraph
+								| Ресторан "Рассольник" - это
+								| импровизированная квартира
+								| интеллигентной советской
+								| семьи, располагающая к душевным
+								| беседам и веселым застольям.
+							a.btn.btn-about(href="#")
+								| Подробнее
+								| <svg class="svg-arrow-btn" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.97" viewBox="0 0 7.97 7.97">
+								| <defs>
+								|     <style>
+								|       .fill-btn-arrow {
+								|         fill: #fff;
+								|         fill-rule: evenodd;
+								|       }
+								|     </style>
+								|   </defs>
+								|   <path class="fill-btn-arrow" d="M1349.03,1496a1,1,0,0,1-.88-0.48,0.9,0.9,0,0,1,.39-1.27l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.27,1.051,1.051,0,0,1,1.36-.37l5.98,3.06a0.907,0.907,0,0,1,0,1.64l-5.98,3.06A1.023,1.023,0,0,1,1349.03,1496Z" transform="translate(-1348.03 -1488.03)"/>
+								| </svg>
+
+mixin index-about-page(class_modification)
+	if class_modification === undefined
+		section(class= 'about-main')
+			+about-content
+	else
+		section(class= 'about-main ' + class_modification)
+			+about-content

@@ -270,9 +270,12 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel="stylesheet" href=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
-		block body-start
-		block content
+		.layout-template-wrapper
+			.layout-template-wrapper__inner
+				block body-start
+				block content
 		block scripts
 			script(src=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src=`${baseDir}js/main.js?v=${Date.now()}`)
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js')
 		block body-end

@@ -1,0 +1,48 @@
+@import "variables";
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: $main-color-font;
+	line-height: 1.2;
+	background: $body-color;
+}
+*:focus {
+	outline: thin dotted !important;
+}
+input::-webkit-input-placeholder       {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+.layout-template-wrapper {
+	position: relative;
+	display: block;
+	min-height: 100vh;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+}
+.main-wrapper {
+	max-width: 1307px;
+	width: 100%;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+.btn {
+	border-radius: 30px;
+	background-color: $btn-color;
+	color: #ffffff;
+	padding: 17px 33px;
+	transition: .3s ease;
+	display: inline-flex;
+	align-items: center;
+	&:hover {
+		background-color: $form-placeholder;
+	}
+}

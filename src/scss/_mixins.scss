@@ -3,3 +3,19 @@
 @import "mixins/sprites";
 @import "mixins/triangle";
 @import "mixins/visually-hidden";
+@mixin link-hover {
+	content: '';
+	position: absolute;
+	width: calc(100% + 36px);
+	height: calc(100% + 6px);
+	opacity: 0;
+	top: -3px;
+	left: -18px;
+	transform: skewX(-15deg);
+	transition: .3s ease;
+	background: $btn-color;
+	z-index: -1;
+}
+@mixin link-hover_hover {
+	opacity: 1;
+}
