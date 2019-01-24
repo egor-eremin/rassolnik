@@ -989,7 +989,7 @@ body {
   background: #f8f3ec; }
 
 *:focus {
-  outline: thin dotted !important; }
+  outline: thin dotted #cd501f !important; }
 
 input::-webkit-input-placeholder {
   color: #b69479;

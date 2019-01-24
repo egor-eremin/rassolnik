@@ -102,9 +102,14 @@ $(document).ready(function () {
 		}
 	})();
 	(function validateCallBackForm() {
-		var badText = "Что-то пошло не так...\nМы обязательно это исправим";
-		var coolText = "Спасибо за заявку!\nНаши менеджеры свяжутся с Вами в ближайшее время.";
-		validationForm('#validate-callback', coolText, badText);
+		if ($('.callback').length > 0) {
+			var badText = "Что-то пошло не так...<br>Мы обязательно это исправим";
+			var coolText = "Спасибо за заявку!<br>Наши менеджеры свяжутся с Вами в ближайшее время.";
+			validationForm('#validate-callback', coolText, badText);
+		}
+	})();
+	(function removeTabIndex() {
+		$('.slick-dots li button').removeAttr('tabindex');
 	})();
 });
 

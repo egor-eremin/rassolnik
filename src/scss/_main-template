@@ -8,7 +8,7 @@ body {
 	background: $body-color;
 }
 *:focus {
-	outline: thin dotted !important;
+	outline: thin dotted $dots-color !important;
 }
 input::-webkit-input-placeholder       {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
 input::-moz-placeholder                {color: $form-placeholder; opacity: 1; transition: opacity 0.3s ease;}
