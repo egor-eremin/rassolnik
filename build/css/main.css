@@ -1269,7 +1269,8 @@ input:focus:-ms-input-placeholder {
 
 .callback-btn_text {
   color: #f7d1aa;
-  text-align: left; }
+  text-align: left;
+  width: 130px; }
   .callback-btn_text svg {
     margin-bottom: 1px;
     margin-left: 5px; }
@@ -1479,7 +1480,6 @@ input:focus:-ms-input-placeholder {
   background: url("../images/televesion.png") no-repeat;
   -webkit-background-size: contain;
      -moz-background-size: contain;
-       -o-background-size: contain;
           background-size: contain;
   position: relative;
   margin-top: 44px; }
@@ -1774,7 +1774,6 @@ input:focus:-ms-input-placeholder {
   background: url("../images/background-history.jpg") center no-repeat;
   -webkit-background-size: 110% auto;
      -moz-background-size: 110% auto;
-       -o-background-size: 110% auto;
           background-size: 110% auto;
   width: 100%;
   height: 100%;
@@ -2299,6 +2298,9 @@ label.error {
          -o-transform: translateX(2px);
             transform: translateX(2px); }
 
+.main-nav_lower-level-item:last-child, .main-nav__item:last-child {
+  margin-right: 0; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }
@@ -2458,5 +2460,27 @@ label.error {
             transform: translateY(100%);
     -webkit-filter: blur(5px);
             filter: blur(5px); } }
+
+@media (max-width: 1300px) {
+  .main-img {
+    height: 600px; }
+  .about-main {
+    padding-bottom: 140px; } }
+
+@media (max-width: 1200px) {
+  .callback-btn_icon {
+    display: none; }
+  .callback-btn_text {
+    width: auto; }
+  .callback-btn {
+    padding-right: 26px;
+    margin-right: 50px; }
+    .callback-btn svg {
+      margin-left: 27px; }
+  .main-logo {
+    margin-right: 35px;
+    margin-left: 35px; }
+  .about-text-slider {
+    padding-right: 0; } }
 
 /*# sourceMappingURL=main.css.map */

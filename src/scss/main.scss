@@ -103,6 +103,7 @@
 .callback-btn_text {
 	color: $btn-header-color;
 	text-align: left;
+	width: 130px;
 	svg {
 		margin-bottom: 1px;
 		margin-left: 5px;
@@ -802,4 +803,8 @@ label.error {
 		transform: translateX(2px);
 	}
 }
+.main-nav_lower-level-item:last-child, .main-nav__item:last-child {
+	margin-right: 0;
+}
 @import "animation";
+@import "media";
