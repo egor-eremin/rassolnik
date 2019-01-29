@@ -20,7 +20,7 @@ mixin header-content
 				li.main-nav_lower-level-item
 					a(href="#") Контакты
 		.main-logo
-			a.logo-image(href="/" role="link")
+			a.logo-image(href="/" aria-label="Логотип Рассольник" role="link")
 				| <svg role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" width="190" height="89" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				|      viewBox="0 0 158.6 69" style="enable-background:new 0 0 158.6 69;" xml:space="preserve">
 				| <style type="text/css">
@@ -62,12 +62,12 @@ mixin header-content
 				| </svg>
 				//img(src="images/main-logo.svg" width="190" height="69")
 
-			a.logo-text(href="tel:83952506180") 8 (3952)
+			a.logo-text(href="tel:83952506180" role="link") +7 (3952)
 				span  506-180
 		.header-right-block
 			button.callback-btn.btn
 				span.callback-btn_text
-					| Забронировать<br> стол <svg xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.969" viewBox="0 0 7.97 7.969">
+					| Забронировать<br> стол <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.969" viewBox="0 0 7.97 7.969">
 					| <defs>
 					|     <style>
 					|       .callback-arrow-right {
@@ -79,7 +79,7 @@ mixin header-content
 					|   <path class="callback-arrow-right" d="M1251.03,87a1.007,1.007,0,0,1-.88-0.483,0.9,0.9,0,0,1,.39-1.269l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.268,1.039,1.039,0,0,1,1.36-.367l5.98,3.058a0.9,0.9,0,0,1,0,1.636l-5.98,3.058A1.044,1.044,0,0,1,1251.03,87Z" transform="translate(-1250.03 -79.031)"/>
 					| </svg>
 				span.callback-btn_icon
-					| <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" viewBox="0 0 40 25">
+					| <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="25" viewBox="0 0 40 25">
 					| <defs>
 					|     <style>
 					|       .table-icon {
@@ -92,7 +92,7 @@ mixin header-content
 					| </svg>
 			ul.language-block
 				li.language-block__icon
-					a(href="#")
+					a.active(href="#")
 						| Ru
 				li.language-block__icon
 					a(href="#")

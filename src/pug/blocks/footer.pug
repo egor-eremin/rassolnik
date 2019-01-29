@@ -5,7 +5,7 @@ mixin footer-content
 	.main-wrapper
 		.footer-wrapper
 			.footer-col-1
-				a.footer-logo(href="/")
+				a.footer-logo(aria-label="Логотип Рассольник" role="link" href="/")
 					| <svg width="229" height="79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					|      viewBox="0 0 563 201.5" style="enable-background:new 0 0 563 201.5;" xml:space="preserve">
 					| <style type="text/css">
@@ -77,7 +77,7 @@ mixin footer-content
 				.separate-line
 				.address-block
 					.address-block__item
-						| <svg version="1.1" width="16" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						| <svg aria-hidden="true" version="1.1" width="16" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						|      viewBox="0 0 10.5 13.5" style="enable-background:new 0 0 10.5 13.5;" xml:space="preserve">
 						| <style type="text/css">
 						|     .address-path{fill:#B53232;}
@@ -97,7 +97,7 @@ mixin footer-content
 						| </svg>
 						| Иркутск, ул. 3 июля, ст. 3
 					a(href="tel:83952506180").address-block__item
-						| <svg version="1.1" width="11" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						| <svg aria-hidden="true" version="1.1" width="11" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						|      viewBox="0 0 7.4 17.1" style="enable-background:new 0 0 7.4 17.1;" xml:space="preserve">
 						| <style type="text/css">
 						|     .address-path{fill:#B53232;}
@@ -111,9 +111,9 @@ mixin footer-content
 						| </g>
 						| </svg>
 						span
-							| 8 (3952) 506-180
+							| +7 (3952) 506-180
 					a(href="mailto:example@irk.ru").address-block__item
-						| <svg width="21" height="19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						| <svg aria-hidden="true" width="21" height="19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						|      viewBox="0 0 13.6 13" style="enable-background:new 0 0 13.6 13;" xml:space="preserve">
 						| <style type="text/css">
 						|     .address-path{fill:#B53232;}
@@ -132,7 +132,7 @@ mixin footer-content
 						a(href="#").site-rules-text
 							| Политика конфиденциальности
 					.mmit
-						a(href="mmit.ru" target="_blank").mmit-svg
+						a(href="mmit.ru" aria-label="Логотип Мегамир Ит" target="_blank").mmit-svg
 							| <svg version="1.1" width="116" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							|      viewBox="0 0 116 30" style="enable-background:new 0 0 116 30;" xml:space="preserve">
 							| <style type="text/css">

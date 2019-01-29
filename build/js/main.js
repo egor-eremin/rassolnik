@@ -215,8 +215,8 @@ $(document).ready(function () {
       });
       $('.js-history-slider').slick({
         fade: true,
-        prevArrow: '<button type="button" class="slick-prev all-slick"><svg version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' + '</g>\n' + '</svg></button>',
-        nextArrow: '<button type="button" class="slick-next all-slick"><svg width="7" height="12" version="1.1" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-next{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' + '</g>\n' + '</svg></button>',
+        prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' + '</g>\n' + '</svg></button>',
+        nextArrow: '<button aria-label="следующий слайд" type="button" class="slick-next all-slick"><svg aria-hidden="true" width="7" height="12" version="1.1" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-next{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' + '</g>\n' + '</svg></button>',
         dots: true,
         asNavFor: '.history-slider-image'
       });
@@ -264,6 +264,22 @@ $(document).ready(function () {
   (function removeTabIndex() {
     $('.slick-dots li button').removeAttr('tabindex');
   })();
+
+  (function upToTopBottom() {
+    $('.arrow-top-button').on('click', function () {
+      animatedScrollToPosition($('body, html'), 0, 300);
+    });
+  })();
+
+  (function initBottomUp() {
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 500) {
+        $('.arrow-top').addClass('active');
+      } else {
+        $('.arrow-top').removeClass('active');
+      }
+    });
+  })();
 });
 
 function validationForm(formInit, textGood, textBad) {
@@ -295,6 +311,13 @@ function validationForm(formInit, textGood, textBad) {
       return false;
     }
   });
+}
+
+function animatedScrollToPosition($selector, position, duration) {
+  $($selector).animate({
+    scrollTop: position
+  }, duration);
+  return false;
 }
 
 /***/ }),
