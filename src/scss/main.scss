@@ -879,7 +879,7 @@ label.error {
 	top: 0;
 	left: 0;
 	transition: .3s ease;
-	//transform: scale(6);
+	pointer-events: none;
 }
 .header-main {
 	z-index: 10;

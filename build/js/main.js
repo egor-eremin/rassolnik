@@ -285,20 +285,26 @@ $(document).ready(function () {
     if ($('.burger-for-nav').length > 0) {
       $('.burger-for-nav').on('click', function () {
         if (!$(this).hasClass('active')) {
-          if ($(window).scrollTop() > 0) {
+          var windowCoordinate = $(window).scrollTop();
+          console.log(windowCoordinate);
+
+          if (windowCoordinate > 0) {
+            console.log('sdd');
             animatedScrollToPosition($('body, html'), 0, 300);
             setTimeout(function () {
               $('.burger-for-nav').addClass('active');
+              $('.header-main').addClass('fixed-position');
+              $('body').addClass('scroll-no');
             }, 300);
+          } else {
+            $('.burger-for-nav').addClass('active');
+            $('.header-main').addClass('fixed-position');
+            $('body').addClass('scroll-no');
           }
-
-          $('.burger-for-nav').addClass('active');
-          $('.header-main').addClass('fixed-position');
-          $('body').addClass('scroll-no');
         } else {
+          console.log('afa');
           $('.burger-for-nav').removeClass('active');
-          $('.header-main').removeClass('fixed-position');
-          $('body').removeClass('scroll-no');
+          $('.header-main').removeClass('fixed-position'); // $('body').removeClass('scroll-no');
         } // $(this).toggleClass('active');
 
       });

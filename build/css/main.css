@@ -2393,7 +2393,8 @@ label.error {
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;
   -moz-transition: .3s ease;
-  transition: .3s ease; }
+  transition: .3s ease;
+  pointer-events: none; }
 
 .header-main {
   z-index: 10; }
