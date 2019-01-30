@@ -52,7 +52,7 @@ mixin footer-content
 				.copyright-text
 					| © «ООО «Рога и Копыта», 2018
 					| Все права защищены.
-				.chebupele
+				.chebupele.chebupele_left-col
 					img(src="images/chebupele.png" alt="Чебурашка")
 			.footer-col-2
 				nav.main-nav.main-nav-footer
@@ -189,6 +189,8 @@ mixin footer-content
 							| </svg>
 							span
 								| поддержка и<br> продвижение сайта
+				.chebupele.chebupele_right-col
+					img(src="images/chebupele.png" alt="Чебурашка")
 mixin footer (class_modification)
 	if class_modification === undefined
 		footer(class= 'footer-main')

@@ -7,21 +7,9 @@ mixin some-history
 	.history-background
 		.background-history-wrapper
 			.background-history-wrapper__transform
-	.history-slider-image
-		.history-slider-image__item
-			picture
-				source(srcset="images/history-slide-img1.webp" type="image/webp")
-				img(src="images/history-slide-img1.png" alt="Камера")
-		.history-slider-image__item
-			picture
-				source(srcset="images/history-slide-img1.webp" type="image/webp")
-				img(src="images/history-slide-img1.png" alt="Камера")
-		.history-slider-image__item
-			picture
-				source(srcset="images/history-slide-img1.webp" type="image/webp")
-				img(src="images/history-slide-img1.png" alt="Камера")
 	.main-wrapper
 		.some-history-wrapper
+			h2.main-title.main-title_history немного истории
 			.some-history__col-1
 				.some-history-slider.js-history-slider
 					.some-history-slider__item
@@ -54,6 +42,19 @@ mixin some-history
 			.some-history__col-2
 				h2.some-history-title
 					| немного истории
+				.history-slider-image
+					.history-slider-image__item
+						picture
+							source(srcset="images/history-slide-img1.webp" type="image/webp")
+							img(src="images/history-slide-img1.png" alt="Камера")
+					.history-slider-image__item
+						picture
+							source(srcset="images/history-slide-img1.webp" type="image/webp")
+							img(src="images/history-slide-img1.png" alt="Камера")
+					.history-slider-image__item
+						picture
+							source(srcset="images/history-slide-img1.webp" type="image/webp")
+							img(src="images/history-slide-img1.png" alt="Камера")
 mixin main-some-history(class_modification)
 	if class_modification === undefined
 		section(class='some-history')

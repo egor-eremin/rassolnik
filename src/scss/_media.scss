@@ -15,10 +15,12 @@
 	}
 	.callback-btn {
 		padding-right: 26px;
-		margin-right: 50px;
 		svg {
 			margin-left: 27px;
 		}
+	}
+	.callback-btn_desctop {
+		margin-right: 50px;
 	}
 	.main-logo {
 		margin-right: 35px;
@@ -26,9 +28,73 @@
 	}
 	.about-text-slider {
 		padding-right: 0;
+		width: 40%;
+		padding-left: 60px;
 	}
-	//.television-slider {
-	//	width: 50%;
-	//	background-size: 100% auto;
+	.television-slider-wrapper {
+		width: 60%;
+	}
+	.fact-slider .slick-dots {
+		left: -22px;
+	}
+	.fact-slider {
+		width: 100%;
+	}
+	.some-history-title {
+		display: none;
+	}
+	.main-title_history {
+		display: block;
+	}
+	.lamp-switch {
+		display: none;
+	}
+	.history-slider-image {
+		left: 50%;
+	}
+	.about-main {
+		padding-bottom: 96px;
+	}
+	.address-block {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 60px;
+	}
+	.address-block__item {
+		margin-bottom: 20px;
+	}
+	.chebupele_left-col {
+		display: none;
+	}
+	.chebupele_right-col {
+		display: block;
+	}
+	.footer-information-block {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.site-rules {
+		margin-bottom: 20px;
+	}
+	.main-nav {
+		display: none;
+	}
+	.callback-btn_mobile {
+		display: inline-block;
+	}
+	.callback-btn_desctop {
+		display: none;
+	}
+	.logo-text {
+		margin-bottom: 28px;
+	}
+	.burger-for-nav {
+		display: block;
+	}
+	//.mobile-nav {
+	//	display: block;
 	//}
+}
+@media (max-width: 1024px) {
+
 }
