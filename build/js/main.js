@@ -286,10 +286,8 @@ $(document).ready(function () {
       $('.burger-for-nav').on('click', function () {
         if (!$(this).hasClass('active')) {
           var windowCoordinate = $(window).scrollTop();
-          console.log(windowCoordinate);
 
           if (windowCoordinate > 0) {
-            console.log('sdd');
             animatedScrollToPosition($('body, html'), 0, 300);
             setTimeout(function () {
               $('.burger-for-nav').addClass('active');
@@ -302,14 +300,23 @@ $(document).ready(function () {
             $('body').addClass('scroll-no');
           }
         } else {
-          console.log('afa');
           $('.burger-for-nav').removeClass('active');
-          $('.header-main').removeClass('fixed-position'); // $('body').removeClass('scroll-no');
-        } // $(this).toggleClass('active');
-
+          $('.header-main').removeClass('fixed-position');
+          $('body').removeClass('scroll-no');
+        }
       });
     }
   })();
+
+  media('all and (min-width: 1201px)', function () {
+    if ($('.burger-for-nav').length > 0) {
+      if ($('.burger-for-nav').hasClass('active')) {
+        $('.burger-for-nav').removeClass('active');
+        $('.header-main').removeClass('fixed-position');
+        $('body').removeClass('scroll-no');
+      }
+    }
+  });
 });
 
 function validationForm(formInit, textGood, textBad) {
@@ -348,6 +355,24 @@ function animatedScrollToPosition($selector, position, duration) {
     scrollTop: position
   }, duration);
   return false;
+}
+
+function media(mediaQueryString, action) {
+  'use strict';
+
+  var handleMatchMedia = function handleMatchMedia(mediaQuery) {
+    if (mediaQuery.matches) {
+      //Попадает в запроc
+      if (action && typeof action === 'function') {
+        action();
+      }
+    }
+  };
+
+  var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
+
+  handleMatchMedia(mql);
+  mql.addListener(handleMatchMedia);
 }
 
 /***/ }),
