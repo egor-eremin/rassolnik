@@ -59,7 +59,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 10;
 	background: linear-gradient(to bottom, rgba(255,255,255,.9) 20%, transparent 100%);
 }
 .main-nav_lower-level-item a {
@@ -888,7 +888,7 @@ label.error {
 	transition: .3s ease;
 	display: none;
 }
-.fixed-position {
+.header-main_index.fixed-position {
 	position: fixed;
 }
 .scroll-no {
@@ -900,7 +900,7 @@ label.error {
 	left: 0px;
 	top: 0px;
 	width: 100vw;
-	height: calc(100% - 67px);
+	height: calc(100vh - 67px);
 	overflow: auto;
 	visibility: hidden;
 	opacity: 0;
