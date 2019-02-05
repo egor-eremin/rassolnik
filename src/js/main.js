@@ -71,7 +71,15 @@ $(document).ready(function () {
 				'</g>\n' +
 				'</svg></button>',
 				dots: true,
-				asNavFor: '.history-slider-image'
+				asNavFor: '.history-slider-image',
+				responsive: [
+					{
+						breakpoint: 641,
+						settings: {
+							arrows: false
+						}
+					},
+				]
 			});
 			$('.history-slider-image').slick({
 				fade: true,
