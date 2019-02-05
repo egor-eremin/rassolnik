@@ -142,6 +142,7 @@
 	}
 	.header-main_index {
 		position: relative;
+		background: transparent;
 	}
 	.about-main {
 		padding-top: 0;
@@ -305,6 +306,9 @@
 	}
 	.copyright-text {
 		padding: 0;
+	}
+	.site-rules-text {
+		text-align: center;
 	}
 }
 @media (max-width: 640px) {
