@@ -48,7 +48,7 @@ $(document).ready(function () {
 	(function initHistorySlider() {
 		if ($('.js-history-slider').length > 0) {
 			$('.js-history-slider').on('init', function (slick) {
-				$('.some-history-slider .slick-arrow').wrapAll('<div class="history-arrow-wrapper"></div>>');
+				$('.some-history-slider .slick-arrow').wrapAll('<div class="history-arrow-wrapper"></div>');
 			});
 			$('.js-history-slider').slick({
 				fade: true,
@@ -157,7 +157,22 @@ $(document).ready(function () {
 					}
 			});
 		}
-	})()
+	})();
+	(function addMenuSlider() {
+		if ($('.js-menu-content').length > 0) {
+			initMenuSlider($('.js-menu-content'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+		}
+	})();
+	(function switchSlide() {
+		if ($('.slider-pagination-button').length > 0) {
+			$('.slider-pagination-button__prev').on('click', function () {
+				$('.js-menu-content').slick('slickPrev');
+			});
+			$('.slider-pagination-button__next').on('click', function () {
+				$('.js-menu-content').slick('slickNext');
+			});
+		}
+	})();
 
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {
@@ -220,4 +235,49 @@ function media(mediaQueryString, action){
 	var mql = window.matchMedia(mediaQueryString); //стандартный медиазапрос для смены режима просмотра
 	handleMatchMedia(mql);
 	mql.addListener(handleMatchMedia);
+}
+function initMenuSlider(initSelector, selectorNavigationBlock, currentSlideSelect, totalSlide) {
+	initSelector.on('init', function(event, slick){
+		var slideCount = slick.slideCount,
+			currentSlide = slick.currentSlide + 1;
+		var thisSiblings = $(this).siblings('' + selectorNavigationBlock + '');
+		var thisNavigationButton = $(this).find('.slick-arrow');
+		$('' + currentSlideSelect + '').html(String(currentSlide));
+		$('' + totalSlide + '').html(String(slideCount));
+		thisNavigationButton.appendTo(thisSiblings);
+
+	});
+	initSelector.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		var slideText = nextSlide + 1,
+			slideCount = slick.slideCount;
+		$('' + currentSlideSelect + '').html(String(slideText));
+		$('' + totalSlide + '').html(String(slideCount));
+	});
+	initSelector.slick({
+		arrows: true,
+		centerMode: true,
+		fade: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
+		'\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' +
+		'<style type="text/css">\n' +
+		'\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' +
+		'</style>\n' +
+		'<g>\n' +
+		'\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' +
+		'</g>\n' +
+		'</svg></button>',
+		nextArrow: '<button aria-label="следующий слайд" type="button" class="slick-next slick-arrow-page all-slick"><svg aria-hidden="true" width="7" height="12" version="1.1" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
+		'\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' +
+		'<style type="text/css">\n' +
+		'\t.path-arrow-next{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' +
+		'</style>\n' +
+		'<g>\n' +
+		'\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' +
+		'</g>\n' +
+		'</svg></button>',
+		// dots: true,
+		swipe: true,
+	});
 }
