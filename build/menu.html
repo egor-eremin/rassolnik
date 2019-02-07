@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=480, initial-scale=1">
 		<title>Рассольник</title>
-		<link rel="stylesheet" href="css/main.css?v=1549510472906">
+		<link rel="stylesheet" href="css/main.css?v=1549531864478">
 	</head>
 	<body>
 		<div class="layout-template-wrapper">
@@ -215,7 +215,7 @@
 					<div class="category-menu">
 						<div class="main-wrapper">
 							<ul class="category-menu__list">
-								<li class="category-menu__list-item"><a class="category-menu-link" href="#">
+								<li class="category-menu__list-item"><a class="category-menu-link active" href="#main-rest-menu">
 										<div class="category-menu-icon">
 											<svg width="55" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 											     viewBox="0 0 46.4 42.6" style="enable-background:new 0 0 46.4 42.6;" xml:space="preserve">
@@ -243,7 +243,7 @@
 											</svg>
 										</div>
 										<div class="category-menu-text">Основное меню</div></a></li>
-								<li class="category-menu__list-item"><a class="category-menu-link" href="#">
+								<li class="category-menu__list-item"><a class="category-menu-link" href="#farm-menu">
 										<div class="category-menu-icon">
 											<svg version="1.1" width="44" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 											     viewBox="0 0 43.8 50" style="enable-background:new 0 0 43.8 50;" xml:space="preserve">
@@ -274,7 +274,7 @@
 											</svg>
 										</div>
 										<div class="category-menu-text">Фермерское меню</div></a></li>
-								<li class="category-menu__list-item"><a class="category-menu-link" href="#">
+								<li class="category-menu__list-item"><a class="category-menu-link" href="#banquets">
 										<div class="category-menu-icon">
 											<svg version="1.1" width="47" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 											     viewBox="0 0 61.6 65.5" style="enable-background:new 0 0 61.6 65.5;" xml:space="preserve">
@@ -340,7 +340,7 @@
 											
 										</div>
 										<div class="category-menu-text">Банкеты</div></a></li>
-								<li class="category-menu__list-item"><a class="category-menu-link" href="#">
+								<li class="category-menu__list-item"><a class="category-menu-link" href="#business-lunch">
 										<div class="category-menu-icon">
 											<svg version="1.1" width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 											     viewBox="0 0 49.8 49.8" style="enable-background:new 0 0 49.8 49.8;" xml:space="preserve">
@@ -411,7 +411,7 @@
 											
 										</div>
 										<div class="category-menu-text">Бизнес ланчи</div></a></li>
-								<li class="category-menu__list-item"><a class="category-menu-link" href="#">
+								<li class="category-menu__list-item"><a class="category-menu-link" href="#childrens-menu">
 										<div class="category-menu-icon">
 											<svg version="1.1" width="40" height="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 											     viewBox="0 0 39.1 44" style="enable-background:new 0 0 39.1 44;" xml:space="preserve">
@@ -450,8 +450,8 @@
 									<source srcset="images/waitress.webp" type="image/webp"><img src="images/waitress.png" alt="Официантка">
 								</picture>
 								<div class="restaurant-menu-category">
-									<ul class="restaurant-subcategory">
-										<li class="restaurant-subcategory__item"><a href="#">К чаю</a></li>
+									<ul class="active restaurant-subcategory" id="main-rest-menu">
+										<li class="restaurant-subcategory__item"><a class="active" href="#">К чаю</a></li>
 										<li class="restaurant-subcategory__item"><a href="#">Горячие закуски</a></li>
 										<li class="restaurant-subcategory__item"><a href="#">Холодные закуски</a></li>
 										<li class="restaurant-subcategory__item"><a href="#">Салаты</a></li>
@@ -465,6 +465,47 @@
 										<li class="restaurant-subcategory__item"><a href="#">Чай, кофе, напитки</a></li>
 										<li class="restaurant-subcategory__item"><a href="#">Гарниры</a></li>
 										<li class="restaurant-subcategory__item"><a href="#">На компанию</a></li>
+									</ul>
+									<ul class="restaurant-subcategory" id="farm-menu">
+										<li class="restaurant-subcategory__item"><a href="#">К чаю</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Горячие закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Холодные закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Салаты</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Супы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Рассольник</a></li>
+									</ul>
+									<ul class="restaurant-subcategory" id="banquets">
+										<li class="restaurant-subcategory__item"><a href="#">К чаю</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Горячие закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Холодные закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Салаты</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Супы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Рассольник</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Пельмени</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Вареники</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">На компанию</a></li>
+									</ul>
+									<ul class="restaurant-subcategory" id="business-lunch">
+										<li class="restaurant-subcategory__item"><a href="#">Салаты</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Супы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Рассольник</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Пельмени</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Вареники</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Основные блюда из рыбы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Выпечка</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Основные блюда из мяса, птицы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Чай, кофе, напитки</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Гарниры</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">На компанию</a></li>
+									</ul>
+									<ul class="restaurant-subcategory" id="childrens-menu">
+										<li class="restaurant-subcategory__item"><a href="#">К чаю</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Горячие закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Холодные закуски</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Салаты</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Супы</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Рассольник</a></li>
+										<li class="restaurant-subcategory__item"><a href="#">Пельмени</a></li>
 									</ul>
 								</div>
 								<div class="menu-content">
@@ -950,8 +991,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1549510472913"></script>
-		<script src="js/main.js?v=1549510472913"></script>
+		<script src="js/vendor.js?v=1549531864486"></script>
+		<script src="js/main.js?v=1549531864486"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
 	</body>
 </html>

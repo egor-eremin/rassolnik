@@ -173,6 +173,32 @@ $(document).ready(function () {
 			});
 		}
 	})();
+	(function switchedTabCategoryMenu() {
+		if ($('.category-menu').length > 0) {
+			$('.restaurant-subcategory:not(.active)').fadeOut(0)
+			$('.category-menu-link').on('click', function (e) {
+				e.preventDefault();
+				var thisLabel = $(this).attr('href').substring(1);
+				if (!$(this).hasClass('active')) {
+					// clearTimeout(timeSet);
+					$('.category-menu-link').removeClass('active');
+					$('.restaurant-subcategory.active').fadeOut(100);
+					$('.restaurant-subcategory.active').removeClass('active');
+					$(this).addClass('active');
+					$('#' + thisLabel).addClass('active');
+					$('#' + thisLabel).delay(100).fadeIn(100);
+					// var timeSet = setTimeout(function () {
+					// 	$('#' + thisLabel).fadeIn(300);
+					// }, 300);
+				}
+			})
+		}
+	})();
+	(function switchedTabSubCategoryMenu() {
+		if () {
+
+		}
+	})();
 
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {

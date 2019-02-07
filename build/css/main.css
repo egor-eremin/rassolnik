@@ -2776,9 +2776,9 @@ label.error {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .category-menu-link:hover .category-icon {
+  .category-menu-link:hover .category-icon, .category-menu-link.active .category-icon {
     fill: #3a3b41; }
-  .category-menu-link:hover .category-menu-text {
+  .category-menu-link:hover .category-menu-text, .category-menu-link.active .category-menu-text {
     color: #3a3b41;
     font-weight: 500; }
 
@@ -3089,7 +3089,7 @@ label.error {
   color: #adadad; }
 
 .menu-content {
-  padding: 42px 60px;
+  padding: 42px 60px 24px 60px;
   position: relative;
   overflow: hidden;
   width: 72%; }
@@ -3167,20 +3167,26 @@ label.error {
        -moz-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-right: 49px; }
+    margin-right: 39px; }
   .page-slider-navigation .page-slider__enumerator {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
        -moz-box-ordinal-group: 3;
         -ms-flex-order: 2;
-            order: 2; }
+            order: 2;
+    width: 50px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .page-slider-navigation .slick-next.slick-arrow-page {
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
        -moz-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    margin-left: 49px; }
+    margin-left: 39px; }
 
 .page-slider__current {
   margin-right: 5px; }
@@ -3256,11 +3262,21 @@ label.error {
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-transform: translateX(-98px);
-     -moz-transform: translateX(-98px);
-      -ms-transform: translateX(-98px);
-       -o-transform: translateX(-98px);
-          transform: translateX(-98px); }
+  -webkit-transform: translateX(-62px);
+     -moz-transform: translateX(-62px);
+      -ms-transform: translateX(-62px);
+       -o-transform: translateX(-62px);
+          transform: translateX(-62px); }
+
+.menu-slider-item {
+  overflow: hidden; }
+
+.menu-content__list {
+  margin-bottom: 23px; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .restaurant-menu {
+    margin-bottom: -4px; } }
 
 @-webkit-keyframes fadeInBackgroundMain {
   0% {

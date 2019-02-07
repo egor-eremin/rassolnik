@@ -1128,7 +1128,7 @@ label.error {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	&:hover {
+	&:hover, &.active {
 		.category-icon {
 			fill: #3a3b41;
 		}
@@ -1320,7 +1320,7 @@ label.error {
 	color: $dish-description;
 }
 .menu-content {
-	padding: 42px 60px;
+	padding: 42px 60px 24px 60px;
 	position: relative;
 	overflow: hidden;
 	width: 72%;
@@ -1362,14 +1362,16 @@ label.error {
 	justify-content: center;
 	.slick-prev.slick-arrow-page {
 		order: 1;
-		margin-right: 49px;
+		margin-right: 39px;
 	}
 	.page-slider__enumerator {
 		order: 2;
+		width: 50px;
+		justify-content: center;
 	}
 	.slick-next.slick-arrow-page {
 		order: 3;
-		margin-left: 49px;
+		margin-left: 39px;
 	}
 }
 .page-slider__current {
@@ -1411,7 +1413,21 @@ label.error {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	transform: translateX(-98px);
+	transform: translateX(-62px);
 }
+.menu-slider-item {
+	overflow: hidden;
+}
+.menu-content__list {
+	margin-bottom: 23px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.restaurant-menu {
+		margin-bottom: -4px;
+	}
+}
+//.restaurant-subcategory:not(.active) {
+//	display: none;
+//}
 @import "animation";
 @import "media";
