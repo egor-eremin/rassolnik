@@ -1298,7 +1298,8 @@ input:focus:-ms-input-placeholder {
 
 .logo-text {
   font-size: 20px;
-  color: #826b58; }
+  color: #826b58;
+  font-weight: 500; }
   .logo-text span {
     font-weight: 700;
     color: #392a1d; }
@@ -1492,7 +1493,8 @@ input:focus:-ms-input-placeholder {
 .slider-paragraph {
   font-size: 18px;
   line-height: 1.3;
-  color: #292522; }
+  color: #292522;
+  margin-bottom: 20px; }
 
 .about-main {
   position: relative;
@@ -2925,7 +2927,46 @@ label.error {
      -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 25px; }
+  margin-top: 25px;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  -o-transition-property: opacity, -o-transform;
+  -moz-transition-property: opacity, transform, -moz-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform, -moz-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+     -moz-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+  -webkit-transition-timing-function: ease;
+     -moz-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+.menu-content__item:nth-child(even) {
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%); }
+
+.slick-active .menu-content__item {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition-delay: .8s;
+     -moz-transition-delay: .8s;
+       -o-transition-delay: .8s;
+          transition-delay: .8s; }
 
 .menu-header {
   display: -webkit-box;
@@ -3210,6 +3251,16 @@ label.error {
     transition: .3s ease; }
   .slider-pagination-button:hover polyline {
     opacity: .7; }
+
+.waitress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-98px);
+     -moz-transform: translateX(-98px);
+      -ms-transform: translateX(-98px);
+       -o-transform: translateX(-98px);
+          transform: translateX(-98px); }
 
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
