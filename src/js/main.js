@@ -159,44 +159,86 @@ $(document).ready(function () {
 		}
 	})();
 	(function addMenuSlider() {
-		if ($('.js-menu-content').length > 0) {
-			initMenuSlider($('.js-menu-content'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+		if ($('.restaurant-menu').length > 0) {
+			var currentSlider = $('.restaurant-subcategory.active a.active').data('slider');
+			initMenuSlider($('#' + currentSlider), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+		}
+	})();
+	(function initSliderTitle() {
+		if ($('.restaurant-menu').length > 0) {
+			var activeSlideTitle = $('.restaurant-subcategory.active a.active').data('title');
+			switchSlider(activeSlideTitle);
 		}
 	})();
 	(function switchSlide() {
 		if ($('.slider-pagination-button').length > 0) {
 			$('.slider-pagination-button__prev').on('click', function () {
-				$('.js-menu-content').slick('slickPrev');
+				$('.slick-arrow-page.slick-prev').trigger('click');
 			});
 			$('.slider-pagination-button__next').on('click', function () {
-				$('.js-menu-content').slick('slickNext');
+				$('.slick-arrow-page.slick-next').trigger('click');
 			});
 		}
 	})();
 	(function switchedTabCategoryMenu() {
-		if ($('.category-menu').length > 0) {
+		if ($('.restaurant-menu').length > 0) {
 			$('.restaurant-subcategory:not(.active)').fadeOut(0)
 			$('.category-menu-link').on('click', function (e) {
 				e.preventDefault();
 				var thisLabel = $(this).attr('href').substring(1);
+				var newSlider;
+				var newTitle;
+
 				if (!$(this).hasClass('active')) {
-					// clearTimeout(timeSet);
+
+					// toggle menu
 					$('.category-menu-link').removeClass('active');
-					$('.restaurant-subcategory.active').fadeOut(100);
-					$('.restaurant-subcategory.active').removeClass('active');
 					$(this).addClass('active');
-					$('#' + thisLabel).addClass('active');
-					$('#' + thisLabel).delay(100).fadeIn(100);
-					// var timeSet = setTimeout(function () {
-					// 	$('#' + thisLabel).fadeIn(300);
-					// }, 300);
+
+					//toggle submenu
+					$('.restaurant-subcategory.active').fadeOut(100).removeClass('active');
+					$('#' + thisLabel).addClass('active').delay(100).fadeIn(100);
+
+					//switch the active class of the first element in the list subcategory
+					$('.restaurant-subcategory__item a').removeClass('active');
+					$('#' + thisLabel + ' .restaurant-subcategory__item:first-child a').addClass('active');
+
+					//toggle active slider
+					$('.js-menu-content.active').slick('unslick').removeClass('active');
+					newSlider = $('#' + thisLabel + ' a.active').data('slider');
+					initMenuSlider($('#' + newSlider), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+					$('#' + newSlider).addClass('active');
+
+					//toggle active title
+					newTitle = $('#' + thisLabel + ' a.active').data('title');
+					switchSlider(newTitle)
 				}
 			})
 		}
 	})();
 	(function switchedTabSubCategoryMenu() {
-		if () {
+		if ($('.restaurant-menu').length > 0) {
 
+			$('.restaurant-subcategory__item a').on('click', function (e) {
+				e.preventDefault();
+				var switchableSlider = $(this).data('slider');
+				var activeSlideTitle = $(this).data('title');
+
+				if (!$(this).hasClass('active')) {
+					switchSlider(activeSlideTitle);
+					$('.restaurant-subcategory__item a').removeClass('active');
+					$(this).addClass('active');
+					$('.js-menu-content.active').slick('unslick').removeClass('active');
+					$('#' + switchableSlider).addClass('active');
+					initMenuSlider($('#' + switchableSlider), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+				}
+			})
+
+        }
+	})();
+	(function initBanquetsSlider() {
+		if ($('.banquets-menu').length > 0) {
+			initMenuSlider($('#banquets'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
 		}
 	})();
 
@@ -211,6 +253,9 @@ $(document).ready(function () {
 	});
 });
 
+function switchSlider(activeTitle) {
+	$('.menu-title').text(activeTitle);
+}
 function validationForm(formInit, textGood, textBad) {
 	var thisTitle = $(formInit).siblings('.form-title');
 	$(formInit).validate({

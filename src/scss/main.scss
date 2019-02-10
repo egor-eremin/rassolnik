@@ -1155,6 +1155,7 @@ label.error {
 	position: relative;
 	background-color: $menu-background;
 	display: flex;
+	min-height: 869px;
 	&::before {
 		content: "";
 		position: absolute;
@@ -1192,11 +1193,11 @@ label.error {
 		height: calc(100% + 16px);
 		top: -8px;
 	}
-	&:hover::before {
+	&:hover::before, &.active::before {
 		@include link-hover_hover
 		background-color: $form-placeholder;
 	}
-	&:hover {
+	&:hover, &.active {
 		color: #fff;
 	}
 }
@@ -1396,8 +1397,8 @@ label.error {
 	margin-right: 30px;
 }
 .slider-pagination-button {
-	width: 46px;
-	height: 46px;
+	//width: 46px;
+	//height: 46px;
 	border-radius: 50%;
 	display: inline-flex;
 	align-items: center;
@@ -1426,8 +1427,162 @@ label.error {
 		margin-bottom: -4px;
 	}
 }
-//.restaurant-subcategory:not(.active) {
-//	display: none;
-//}
+.restaurant-menu .menu-content__list:not(.active) {
+	display: none;
+}
+.slider-pagination {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+.banquets-wrapper {
+	display: flex;
+	background-color: $banquets-background;
+	padding-right: 0;
+	padding-left: 0;
+	position: relative;
+}
+.banquets-description {
+	width: 43%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 88px;
+	background: url("../images/table-banquets.png") no-repeat center calc(100% + 1px);
+	background-size: calc(100% - 30px) auto;
+	padding-bottom: 326px;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: '';
+		height: 100%;
+		position: absolute;
+		right: 0px;
+		top: 0;
+		box-shadow: 17px 0px 62px 6px rgba(0, 0, 0, 0.75);
+		width: 1px;
+		transform: translateX(100%);
+	}
+}
+.banquets {
+	background: $menu-background;
+}
+.title-content {
+	font-weight: 500;
+	font-size: 18px;
+	color: $menu-subtitle;
+	text-align: center;
+	max-width: 350px;
+	position: relative;
+	padding-bottom: 40px;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 69px;
+		height: 4px;
+		background: $dots-color;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+	}
+}
+.description-text {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.7;
+	color: $label-color;
+}
+.slider-text_description {
+	text-align: center;
+	padding: 0 103px;
+}
+.description-content {
+	margin-top: 18px;
+	padding: 0 54px 70px 54px;
+	position: relative;
+	margin-bottom: 41px;
+	&::before {
+		content: "";
+		width: 113px;
+		height: 3px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		background: url(../images/h1-bottom.svg) no-repeat;
+		background-size: 100% 100%;
+	}
+}
+.banquets-menu {
+	width: 57%;
+	position: relative;
+	overflow: hidden;
+	padding: 42px 60px 24px 60px;
+	&::before {
+		content: '';
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		box-shadow: -17px 0px 62px 4px rgba(0, 0, 0, 0.75);
+		width: 1px;
+		transform: translateX(-100%);
+	}
+}
+.photo-hall__wrapper {
+	display: flex;
+	align-items: center;
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+	&::before {
+		content: '';
+		height: 100%;
+		width: calc((100vw - 100%) / 2);
+		background: url("../images/background-banquet.jpg") no-repeat left center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+	}
+	&::after {
+		content: '';
+		height: 100%;
+		width: calc((100vw - 100%) / 2);
+		background: url("../images/background-banquet.jpg") no-repeat right center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translateX(100%);
+	}
+}
+.photo-hall__item {
+	width: calc(100% / 3);
+}
+.photo-hall {
+	overflow: hidden;
+}
+.photo-hall__item-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 80%;
+}
+.photo-hall__img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		font-family: 'object-fit: cover; object-position: center;';
+	}
+}
+
 @import "animation";
 @import "media";
