@@ -3271,7 +3271,11 @@ label.error {
   overflow: hidden; }
 
 .menu-content__list {
-  margin-bottom: 23px; }
+  margin-bottom: 23px;
+  -webkit-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  -moz-transition: 1.5s ease;
+  transition: 1.5s ease; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .restaurant-menu {
