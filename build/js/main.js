@@ -267,6 +267,14 @@ $(document).ready(function () {
     }
   })();
 
+  (function validateCallbackHForm() {
+    if ($('.callback-h ').length > 0) {
+      var badText = "Что-то пошло не так...<br>Мы обязательно это исправим";
+      var coolText = "Спасибо за заявку!<br>Наши менеджеры свяжутся с Вами в ближайшее время.";
+      validationForm('#validate-callback-h', coolText, badText);
+    }
+  })();
+
   (function removeTabIndex() {
     $('.slick-dots li button').removeAttr('tabindex');
   })();
@@ -393,6 +401,24 @@ $(document).ready(function () {
   (function initBanquetsSlider() {
     if ($('.banquets-menu').length > 0) {
       initMenuSlider($('#banquets'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+    }
+  })();
+
+  (function initBanquetsGallery() {
+    if ($('.photo-hall').length > 0) {
+      $('.photo-hall__item-wrapper').on('click', function (event) {
+        event.preventDefault();
+        var gallery = $(this).attr('href');
+        $(gallery).magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          mainClass: 'hall-gallery',
+          gallery: {
+            enabled: true,
+            tCounter: '%curr% из %total%'
+          }
+        }).magnificPopup('open');
+      });
     }
   })();
 
