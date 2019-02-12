@@ -10,7 +10,12 @@ block content
 	main.main-content
 		header.header-content
 			.main-wrapper.main-wrapper_content
-				include pug/blocks/bread-crumbs
+				.breadcrumbs
+					ul.breadcrumbs-list
+						li.breadcrumbs-list__item
+							a(href="/") Главная
+						li.breadcrumbs-list__item
+							a(href="#") Банкеты
 				h1.main-h1 Банкеты
 		section.banquets
 			.main-wrapper.banquets-wrapper

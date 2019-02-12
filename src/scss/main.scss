@@ -1753,6 +1753,67 @@ label.error {
 .callback-h {
 	margin-bottom: 54px;
 }
+.subscription-instagram {
+	background: url("../images/background-news.jpg") no-repeat top;
+	background-size: cover;
+	position: relative;
+	padding: 19px 0;
+	&::before {
+		content: '';
+		width: 266px;
+		height: 267px;
+		display: block;
+		background: url("../images/phone.png") no-repeat bottom;
+		position: absolute;
+		bottom: 0;
+		left: 231px;
+	}
+}
+.subscription-instagram__text-wrapper {
+	margin-left: 50%;
+	max-width: 357px;
+}
+.subscription-instagram__text {
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 1.3;
+	margin-bottom: 12px;
+	img {
+		margin-top: 9px;
+		margin-left: 16px;
+	}
+}
+.subscription-instagram__additional-text {
+	display: block;
+	font-size: 18px;
+	color: #edc6d0;
+	margin-top: 4px;
+}
+.news {
+	margin-top: 58px;
+}
+.btn-instagram {
+	width: 100%;
+	max-width: 268px;
+	justify-content: space-between;
+	background: transparent;
+	border: 1px solid #a27556;
+	color: $btn-color;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 12px 38px 12px 31px;
+	&:hover {
+		background: $btn-color;
+		color: #ffffff;
+		.fill-btn-arrow {
+			fill: #fff;
+		}
+	}
+	& .fill-btn-arrow {
+		fill: $btn-color;
+	}
+}
 
 @import "animation";
 @import "media";
