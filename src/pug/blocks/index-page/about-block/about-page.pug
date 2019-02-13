@@ -6,7 +6,9 @@ mixin about-content
 		.main-wrapper
 			.about-slider
 				.television-slider-wrapper
-					img.television-img(src="images/televesion.png" alt="Телевизор")
+					picture.television-img
+						source(srcset="images/televesion.webp" type="image/webp")
+						img.television-img(src="images/televesion.png" alt="Телевизор")
 					img.switch-television(src="images/switch.png" data-switch-index="" alt="Переключатель на телевизор")
 					.television-slider
 						.television-slider__item
