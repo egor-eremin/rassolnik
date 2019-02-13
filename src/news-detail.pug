@@ -1,0 +1,68 @@
+extends pug/base
+append vars
+	- title = "Рассольник"
+	- meta.viewport = "width=480, initial-scale=1"
+
+block content
+	include pug/blocks/header
+	+header('header-main_other-page')
+	main.main-content
+		header.header-content
+			.main-wrapper.main-wrapper_content
+				.breadcrumbs.breadcrumbs_news-detail
+					ul.breadcrumbs-list
+						li.breadcrumbs-list__item
+							a(href="/") Главная
+						li.breadcrumbs-list__item
+							a(href="#") Новости
+						li.breadcrumbs-list__item
+							a(href="#") Новогодние корпоративы
+		section.news-detail
+			.main-wrapper.main-wrapper_news-detail
+				.news-detail__preview-img
+					img(src="images/news-detail-img.jpg" alt="Новогодние корпоративы")
+				.news-detail__cotent
+					aside.aside-news-detail
+						.news-detail__title-block
+							h1.news-detail__title
+								| Новогодние корпоративы
+						time.news-detail__date-publication
+							| 1 января 2018
+						.book-table
+							h4.book-table__title Забронировать стол
+							img.book-table__img(src="images/book-phone.png" alt="Телефон")
+							button.booking-button
+								| <svg aria-hidden="true" class="svg-arrow-btn" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.97" viewBox="0 0 7.97 7.97">
+								|                                                                            <defs>
+								|                                                                                <style>
+								|                                                                                  .fill-btn-arrow {
+								|                                                                                    fill: #fff;
+								|                                                                                    fill-rule: evenodd;
+								|                                                                                  }
+								|                                                                                </style>
+								|                                                                              </defs>
+								|                                                                              <path class="fill-btn-arrow" d="M1349.03,1496a1,1,0,0,1-.88-0.48,0.9,0.9,0,0,1,.39-1.27l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.27,1.051,1.051,0,0,1,1.36-.37l5.98,3.06a0.907,0.907,0,0,1,0,1.64l-5.98,3.06A1.023,1.023,0,0,1,1349.03,1496Z" transform="translate(-1348.03 -1488.03)"></path>
+								|                                                                            </svg>
+
+
+					.news-detail__text
+						p
+							| Мой любимый ресторан. Была здесь с родителями, встречалась с подругами. Всегда высокий уровень
+							| обслуживания, прекрасная кухня, отличная атмосфера. Здесь все в советском стиле, приходя сюда, будто
+							| попадаешь в детство. У гардероба встречает добродушный дядя Вася в растянутых трениках, провожает
+							| к столику. Официантки внимательные, но когда много посетителей, обслуживают медленно.
+						p
+							| Мой любимый ресторан. Была здесь с родителями, встречалась с подругами. Всегда высокий уровень
+							| обслуживания, прекрасная кухня, отличная атмосфера. Здесь все в советском стиле, приходя сюда, будто
+							| попадаешь в детство. У гардероба встречает добродушный дядя Вася в растянутых трениках, провожает
+							| к столику. Официантки внимательные, но когда много посетителей, обслуживают медленно.
+						p
+							| Мой любимый ресторан. Была здесь с родителями, встречалась с подругами. Всегда высокий уровень
+							| обслуживания, прекрасная кухня, отличная атмосфера. Здесь все в советском стиле, приходя сюда, будто
+							| попадаешь в детство. У гардероба встречает добродушный дядя Вася в растянутых трениках, провожает
+							| к столику. Официантки внимательные, но когда много посетителей, обслуживают медленно.
+	include pug/blocks/footer
+	+footer('')
+	include pug/blocks/callback
+	+callback
+	include pug/blocks/arrow-top
