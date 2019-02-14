@@ -1,0 +1,24 @@
+extends pug/base
+append vars
+	- title = "Рассольник"
+	- meta.viewport = "width=480, initial-scale=1"
+block content
+	include pug/blocks/header
+	+header('header-main_other-page')
+	main.main-content
+		header.header-content
+			.main-wrapper.main-wrapper_content
+				.breadcrumbs
+					ul.breadcrumbs-list
+						li.breadcrumbs-list__item
+							a(href="/") Главная
+						li.breadcrumbs-list__item
+							a(href="#") Контакты
+				h1.main-h1 Контакты
+		section.contacts
+			.map-block#map-init
+	include pug/blocks/footer
+	+footer('')
+	include pug/blocks/callback
+	+callback
+	include pug/blocks/arrow-top

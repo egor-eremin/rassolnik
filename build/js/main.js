@@ -442,6 +442,26 @@ $(document).ready(function () {
     }
   })();
 
+  (function initContactsMap() {
+    if ($('.map-block').length > 0) {
+      var init = function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map-init", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [55.76, 37.64],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 7
+        });
+      };
+
+      ymaps.ready(init);
+    }
+  })();
+
   media('all and (min-width: 1201px)', function () {
     if ($('.burger-for-nav').length > 0) {
       if ($('.burger-for-nav').hasClass('active')) {

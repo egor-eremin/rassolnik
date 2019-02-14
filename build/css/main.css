@@ -4359,6 +4359,9 @@ label.error {
 .wrapper-with-line {
   margin-top: -1px; }
 
+.map-block {
+  height: 651px; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }
