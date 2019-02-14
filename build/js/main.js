@@ -428,6 +428,20 @@ $(document).ready(function () {
     }
   })();
 
+  (function initInteriorGallery() {
+    if ($('.interior-list').length > 0) {
+      $('.interior-list').magnificPopup({
+        delegate: '.interior-list__item',
+        type: 'image',
+        mainClass: 'hall-gallery',
+        gallery: {
+          enabled: true,
+          tCounter: '%curr% из %total%'
+        }
+      });
+    }
+  })();
+
   media('all and (min-width: 1201px)', function () {
     if ($('.burger-for-nav').length > 0) {
       if ($('.burger-for-nav').hasClass('active')) {

@@ -272,6 +272,19 @@ $(document).ready(function () {
 			initMenuSlider($('.page-slider'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
 		}
 	})();
+	(function initInteriorGallery() {
+		if ($('.interior-list').length > 0) {
+			$('.interior-list').magnificPopup({
+				delegate: '.interior-list__item',
+				type: 'image',
+				mainClass: 'hall-gallery',
+				gallery: {
+					enabled: true,
+					tCounter: '%curr% из %total%',
+				}
+			});
+		}
+	})();
 
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {
