@@ -422,6 +422,12 @@ $(document).ready(function () {
     }
   })();
 
+  (function initPageSlider() {
+    if ($('.page-slider').length > 0) {
+      initMenuSlider($('.page-slider'), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
+    }
+  })();
+
   media('all and (min-width: 1201px)', function () {
     if ($('.burger-for-nav').length > 0) {
       if ($('.burger-for-nav').hasClass('active')) {
