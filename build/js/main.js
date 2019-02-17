@@ -445,17 +445,27 @@ $(document).ready(function () {
   (function initContactsMap() {
     if ($('.map-block').length > 0) {
       var init = function init() {
-        // Создание карты.
-        var myMap = new ymaps.Map("map-init", {
-          // Координаты центра карты.
-          // Порядок по умолчанию: «широта, долгота».
-          // Чтобы не определять координаты центра карты вручную,
-          // воспользуйтесь инструментом Определение координат.
-          center: [55.76, 37.64],
-          // Уровень масштабирования. Допустимые значения:
-          // от 0 (весь мир) до 19.
-          zoom: 7
+        var myMap = new ymaps.Map('map', {
+          center: [52.2754, 104.2856],
+          zoom: 18,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
         });
+        var placemark = new ymaps.Placemark(myMap.getCenter(), {
+          // Зададим содержимое заголовка балуна.
+          balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' + '<span class="description">Сеть кинотеатров</span>',
+          // Зададим содержимое основной части балуна.
+          balloonContentBody: '<img src="img/cinema.jpg" height="150" width="200"> <br/> ' + '<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>' + '<b>Ближайшие сеансы</b> <br/> Сеансов нет.',
+          // Зададим содержимое нижней части балуна.
+          balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
+          // Зададим содержимое всплывающей подсказки.
+          hintContent: 'Рога и копыта'
+        }); // Добавим метку на карту.
+
+        myMap.geoObjects.add(placemark); // Откроем балун на метке.
+
+        placemark.balloon.open();
       };
 
       ymaps.ready(init);
