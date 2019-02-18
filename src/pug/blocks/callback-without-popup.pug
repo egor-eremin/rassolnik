@@ -3,11 +3,11 @@ mixin callback-content-h
 		h4.form-title Оставить заявку
 		form.callback-form.callback-form_h#validate-callback-h
 			.callback-form-item
-				label.callback-form-label(for="callback-name") Имя
-				input.callback-form-input(name="name" required type="text")
+				label.callback-form-label(for="callback-h-name") Имя
+				input#callback-h-name.callback-form-input(name="name" required type="text")
 			.callback-form-item
-				label.callback-form-label(for="callback-name") Телефон
-				input.user-phone.callback-form-input(name="phone" minlength="18" required type="text")
+				label.callback-form-label(for="callback-h-phone") Телефон
+				input#callback-h-phone.user-phone.callback-form-input(name="phone" minlength="18" required type="text")
 			.callback-form-item.callback-form-item_submit
 				button.btn.form-submit
 					|    Оставить заявку

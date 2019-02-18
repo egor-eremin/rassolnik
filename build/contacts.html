@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=480, initial-scale=1">
 		<title>Рассольник</title>
-		<link rel="stylesheet" href="css/main.css?v=1550305996090">
+		<link rel="stylesheet" href="css/main.css?v=1550474299440">
 	</head>
 	<body>
 		<div class="layout-template-wrapper">
@@ -213,6 +213,47 @@
 						</div>
 					</header>
 					<section class="contacts">
+						<div class="contacts-form-wrapper">
+							<div class="main-wrapper">
+								<div class="callback-form-wrapper callback-form-wrapper_contacts">
+									<h4 class="form-title">Связаться с нами</h4>
+									<div class="form-separate"></div>
+									<form class="callback-form" id="validate-callback-contacts">
+										<div class="callback-form-item">
+											<label class="callback-form-label" for="callback-name-contacts">Имя</label>
+											<input class="callback-form-input" id="callback-name-contacts" name="name" required type="text">
+										</div>
+										<div class="callback-form-item">
+											<label class="callback-form-label" for="callback-phone-contacts">Телефон</label>
+											<input class="user-phone callback-form-input" id="callback-phone-contacts" name="phone" minlength="18" required type="text">
+										</div>
+										<div class="callback-form-item">
+											<label class="callback-form-label" for="callback-textarea-contacts">Сообщение</label>
+											<textarea class="callback-form-input callback-textarea" id="callback-textarea-contacts"></textarea>
+										</div>
+										<div class="callback-form-item callback-form-item_submit">
+											<button class="btn form-submit">
+												   Оставить сообщение
+												<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="7.97" height="7.969" viewBox="0 0 7.97 7.969">
+												                                                                   <defs>
+												                                                                       <style>
+												                                                                         .callback-arrow-right {
+												                                                                           fill: #fdd8a3;
+												                                                                           fill-rule: evenodd;
+												                                                                         }
+												                                                                       </style>
+												                                                                     </defs>
+												                                                                     <path class="callback-arrow-right" d="M1251.03,87a1.007,1.007,0,0,1-.88-0.483,0.9,0.9,0,0,1,.39-1.269l4.38-2.24-4.38-2.24a0.9,0.9,0,0,1-.39-1.268,1.039,1.039,0,0,1,1.36-.367l5.98,3.058a0.9,0.9,0,0,1,0,1.636l-5.98,3.058A1.044,1.044,0,0,1,1251.03,87Z" transform="translate(-1250.03 -79.031)"></path>
+												                                                                   </svg>
+											</button>
+										</div>
+										<div class="callback-form-item callback-form-item_text">
+											<p class="callback-text">Заполняя данную форму, Вы соглашаетесь с <a href="#" class="privacy-policy">Политикой обработки персональных данных</a></p>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
 						<div class="map-block" id="map-init"></div>
 					</section>
 				</main>
@@ -408,7 +449,7 @@
 																<input class="callback-form-input" id="callback-name" name="name" required type="text">
 															</div>
 															<div class="callback-form-item">
-																<label class="callback-form-label" for="callback-name">Телефон</label>
+																<label class="callback-form-label" for="callback-phone">Телефон</label>
 																<input class="user-phone callback-form-input" id="callback-phone" name="phone" minlength="18" required type="text">
 															</div>
 															<div class="callback-form-item callback-form-item_submit">
@@ -448,8 +489,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1550305996094"></script>
-		<script src="js/main.js?v=1550305996094"></script>
+		<script src="js/vendor.js?v=1550474299447"></script>
+		<script src="js/main.js?v=1550474299447"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=70049068-bc39-44ad-b366-1739646384ea&amp;lang=ru_RU" type="text/javascript"></script>
 	</body>

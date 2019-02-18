@@ -2240,6 +2240,90 @@ label.error {
 .map-block {
 	height: 651px;
 }
+.custom-baloon {
+	width: 346px;
+	height: 210px;
+	background-color: $btn-color;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0px 22px 28.13px 0.87px rgba(215, 185, 169, 0.74);
+	padding: 31px 15px;
+	position: relative;
+	transform: translate(-50%,-100%);
+	margin-top: -19px;
+	&::before {
+		content: '';
+		border: 7px solid transparent;
+		border-top: 12px solid $btn-color;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 100%);
+	}
+	&::after {
+		content: '';
+		display: block;
+		width: 143px;
+		height: 211px;
+		background: url("../images/baloon-img.png") no-repeat center;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 8px;
+		margin-left: 11px;
+	}
+}
+.custom-baloon__address-item {
+	text-align: center;
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.custom-baloon__address-item:last-child {
+	margin-bottom: 0;
+}
+.custom-baloon__logo {
+	margin-bottom: 25px;
+}
+.contacts-form-wrapper {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 2;
+	min-height: 100%;
+	pointer-events: none;
+}
+.contacts {
+	position: relative;
+}
+.callback-form-wrapper_contacts {
+	margin: 0;
+	background-color: $body-color;
+	box-shadow: 0px 22px 28.13px 0.87px rgba(215, 185, 169, 0.74);
+	margin-top: -60px;
+	max-width: 391px;
+	padding: 50px 40px 14px 40px;
+	pointer-events: auto;
+	min-height: 500px;
+	.form-separate, .callback-form-item {
+		margin-bottom: 13px;
+	}
+	.callback-form-item_submit {
+		margin-top: 27px;
+	}
+	.form-submit {
+		font-size: 18px;
+	}
+}
+.callback-textarea {
+	resize: none;
+	height: 151px;
+}
 
 @import "animation";
 @import "media";

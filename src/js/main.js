@@ -291,32 +291,53 @@ $(document).ready(function () {
 			ymaps.ready(init);
 
 			function init() {
-				var myMap = new ymaps.Map('map', {
+				var myMap = new ymaps.Map('map-init', {
 					center: [52.2754,104.2856],
 					zoom: 18,
 					controls: []
 				}, {
 					searchControlProvider: 'yandex#search'
+				}),
+
+				MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+					'<div class="custom-baloon">' +
+						'<div class="custom-baloon__logo">' +
+							'<img src="images/baloon-logo.png" alt="Логотип">' +
+						'</div>' +
+						'<div class="custom-baloon__address">' +
+							'<div class="custom-baloon__address-item">' +
+								'Иркутск, ул. 3 июля, ст. 3' +
+							'</div>' +
+							'<div class="custom-baloon__address-item">' +
+								'<a href="tel:83952506180">8 (3952) 506-180</a>' +
+							'</div>' +
+							'<div class="custom-baloon__address-item">' +
+								'<a href="mailto:example@irk.ru">example@irk.ru</a>' +
+							'</div>' +
+						'</div>' +
+					'</div>'),
+
+				myPlacemark = window.myPlacemark = new ymaps.Placemark([52.2754,104.2870], {
+					balloonHeader: 'Заголовок балуна',
+					balloonContent: 'Контент балуна'
+				}, {
+					balloonShadow: false,
+					balloonLayout: MyBalloonLayout,
+					// offset: [-173,105],
 				});
 
-				var placemark = new ymaps.Placemark(myMap.getCenter(), {
-					// Зададим содержимое заголовка балуна.
-					balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' +
-					'<span class="description">Сеть кинотеатров</span>',
-					// Зададим содержимое основной части балуна.
-					balloonContentBody: '<img src="img/cinema.jpg" height="150" width="200"> <br/> ' +
-					'<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>' +
-					'<b>Ближайшие сеансы</b> <br/> Сеансов нет.',
-					// Зададим содержимое нижней части балуна.
-					balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
-					// Зададим содержимое всплывающей подсказки.
-					hintContent: 'Рога и копыта'
-				});
-				// Добавим метку на карту.
-				myMap.geoObjects.add(placemark);
-				// Откроем балун на метке.
-				placemark.balloon.open();
+				myMap.geoObjects.add(myPlacemark);
+				myPlacemark.balloon.open();
+
 			}
+		}
+	})();
+
+	(function validateContactsForm() {
+		if ($('#validate-callback-contacts').length > 0) {
+			var badText = "Что-то пошло не так...<br>Мы обязательно это исправим";
+			var coolText = "Спасибо за заявку!<br>Наши менеджеры свяжутся с Вами в ближайшее время.";
+			validationForm('#validate-callback-contacts', coolText, badText);
 		}
 	})();
 
