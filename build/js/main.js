@@ -186,7 +186,7 @@ $(document).ready(function () {
   })();
 
   (function initAboutSlider() {
-    if ($('.about-slider').length > 0) {
+    if ($('.about-slider, .affiche__slider-block').length > 0) {
       $('.fact-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         $('.switch-television').attr('data-switch-index', nextSlide);
       });

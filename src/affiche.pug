@@ -1,0 +1,71 @@
+extends pug/base
+append vars
+	- title = "Рассольник"
+	- meta.viewport = "width=480, initial-scale=1"
+block content
+	include pug/blocks/header
+	+header('header-main_other-page')
+	main.main-content
+		header.header-content
+			.main-wrapper.main-wrapper_content
+				.breadcrumbs
+					ul.breadcrumbs-list
+						li.breadcrumbs-list__item
+							a(href="/") Главная
+						li.breadcrumbs-list__item
+							a(href="#") Афиша
+				h1.main-h1 Афиша
+		section.affiche.section-with-line
+			.main-wrapper.interior-list.wrapper-with-line
+				.prev-text
+					| Приглашаем Вас окунуться
+					| в уютную атмосферу СССР
+					| 70-х годов
+				.affiche__slider-block
+					.television-slider-wrapper
+						picture.television-img
+							source(srcset="images/television-affiche.webp" type="image/webp")
+							img.television-img(src="images/television-affiche.png" alt="Телевизор")
+						.television-slider
+							.television-slider__item
+								img(src="images/slader-screen.jpg" alt="экран")
+							.television-slider__item
+								img(src="images/slader-screen.jpg" alt="экран")
+							.television-slider__item
+								img(src="images/slader-screen.jpg" alt="экран")
+					.about-text-slider
+						.fact-slider
+							.fact-slider__item
+								h2.affiche-title.affiche-title_with-title
+									| Christmas Music Quiz
+								.affiche-when
+									h3.affiche-title Когда
+									p.slider-paragraph
+										| 16 декабря (воскресенье)
+										| 17:00
+								.affiche-where
+									h3.affiche-title Где
+									p.slider-paragraph
+										| приглашаем
+										| всех на Christmas Music Quiz, который
+										| пройдет в ресторане "РАССОЛЬНИК"!
+								.affiche-description
+									h3.affiche-title Описание
+									p.slider-paragraph
+										| Cобирай команду от 2 до 8 человек!
+									p.slider-paragraph
+										| Взнос 300 с человека за игру!
+									p.slider-paragraph
+										| Депозит со стола составляет 1000 рублей!
+								.affiche-epilogue
+									p.slider-paragraph
+										| Предварительная регистрация
+										| на игру обязательна!
+										| По телефону: +7 (964) 354-45-15 или 50-61-80
+
+
+	include pug/blocks/footer
+	+footer('')
+	include pug/blocks/callback
+	+callback
+	include pug/blocks/arrow-top

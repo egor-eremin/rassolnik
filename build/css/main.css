@@ -4475,6 +4475,70 @@ label.error {
   resize: none;
   height: 151px; }
 
+.prev-text {
+  font-size: 21px;
+  line-height: 1.4;
+  color: #b69479;
+  max-width: 385px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 27px; }
+  .prev-text::before {
+    content: "";
+    width: 69px;
+    height: 4px;
+    background-color: #cd501f;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.affiche {
+  padding-top: 25px; }
+
+.affiche__slider-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  margin-top: 32px; }
+  .affiche__slider-block .television-slider {
+    z-index: 1; }
+  .affiche__slider-block .slick-dots {
+    display: none; }
+  .affiche__slider-block .about-text-slider::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    border: 5px solid #b69479;
+    right: 49px; }
+  .affiche__slider-block .about-text-slider {
+    margin-right: 49px; }
+
+.television-img {
+  position: relative;
+  z-index: 2; }
+
+.affiche-title {
+  font-size: 18px;
+  color: #353c44;
+  font-weight: 600;
+  text-align: center; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }

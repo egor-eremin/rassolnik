@@ -2324,6 +2324,64 @@ label.error {
 	resize: none;
 	height: 151px;
 }
+.prev-text {
+	font-size: 21px;
+	line-height: 1.4;
+	color: $form-placeholder;
+	max-width: 385px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 27px;
+	&::before {
+		content: "";
+		width: 69px;
+		height: 4px;
+		background-color: $dots-color;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.affiche {
+	padding-top: 25px;
+}
+.affiche__slider-block {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	margin-top: 32px;
+	.television-slider {
+		z-index: 1;
+	}
+	.slick-dots {
+		display: none;
+	}
+	.about-text-slider::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 60%;
+		border: 5px solid $form-placeholder;
+		right: 49px;
+	}
+	.about-text-slider {
+		margin-right: 49px;
+	}
+}
+.television-img {
+	position: relative;
+	z-index: 2;
+}
+.affiche-title {
+	font-size: 18px;
+	color: $menu-subtitle;
+	font-weight: 600;
+	text-align: center;
+}
+
 
 @import "animation";
 @import "media";
