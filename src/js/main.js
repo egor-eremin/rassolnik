@@ -341,6 +341,8 @@ $(document).ready(function () {
 		}
 	})();
 
+
+
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {
 			if ($('.burger-for-nav').hasClass('active')) {

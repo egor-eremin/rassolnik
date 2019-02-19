@@ -1565,7 +1565,10 @@ input:focus:-ms-input-placeholder {
 
 .television-slider-wrapper {
   position: relative;
-  margin-top: 36px; }
+  margin-top: 36px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
 
 .switch-television {
   position: absolute;
@@ -4514,20 +4517,39 @@ label.error {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
-  margin-top: 32px; }
+  margin-top: 32px;
+  min-height: 700px; }
   .affiche__slider-block .television-slider {
     z-index: 1; }
   .affiche__slider-block .slick-dots {
-    display: none; }
+    display: none !important; }
   .affiche__slider-block .about-text-slider::before {
     content: '';
     position: absolute;
     height: 100%;
-    width: 60%;
+    width: 53.5%;
     border: 5px solid #b69479;
-    right: 49px; }
+    right: 74px; }
   .affiche__slider-block .about-text-slider {
-    margin-right: 49px; }
+    margin-right: 74px;
+    width: -webkit-calc(100% - 840px);
+    width: -moz-calc(100% - 840px);
+    width: calc(100% - 840px);
+    padding-left: 6.5%;
+    padding-right: 6.5%; }
+  .affiche__slider-block .television-slider-wrapper {
+    margin-top: 107px;
+    margin-left: 74px;
+    pointer-events: none; }
+  .affiche__slider-block .slider-paragraph {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #392a1d;
+    margin-bottom: 11px; }
+  .affiche__slider-block .fact-slider {
+    padding-top: 75px;
+    padding-bottom: 75px; }
 
 .television-img {
   position: relative;
@@ -4538,6 +4560,34 @@ label.error {
   color: #353c44;
   font-weight: 600;
   text-align: center; }
+
+.affiche-title_with-line {
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 57px; }
+  .affiche-title_with-line::before {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #cd501f; }
+
+.affiche-block {
+  margin-top: 38px; }
+
+.affiche-block .affiche-title {
+  margin-bottom: 4px; }
+
+.affiche-epilogue .slider-paragraph {
+  font-weight: 600; }
 
 @-webkit-keyframes fadeInBackgroundMain {
   0% {

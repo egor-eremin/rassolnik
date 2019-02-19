@@ -302,6 +302,7 @@
 .television-slider-wrapper {
 	position: relative;
 	margin-top: 36px;
+	flex-shrink: 0;
 }
 .switch-television {
 	position: absolute;
@@ -2353,22 +2354,42 @@ label.error {
 	align-items: flex-start;
 	position: relative;
 	margin-top: 32px;
+	min-height: 700px;
 	.television-slider {
 		z-index: 1;
 	}
 	.slick-dots {
-		display: none;
+		display: none !important;
 	}
 	.about-text-slider::before {
 		content: '';
 		position: absolute;
 		height: 100%;
-		width: 60%;
+		width: 53.5%;
 		border: 5px solid $form-placeholder;
-		right: 49px;
+		right: 74px;
 	}
 	.about-text-slider {
-		margin-right: 49px;
+		margin-right: 74px;
+		width: calc(100% - 840px);
+		padding-left: 6.5%;
+		padding-right: 6.5%;
+	}
+	.television-slider-wrapper {
+		margin-top: 107px;
+		margin-left: 74px;
+		pointer-events: none;
+	}
+	.slider-paragraph {
+		text-align: center;
+		font-size: 14px;
+		line-height: 1.2;
+		color: $main-menu-color;
+		margin-bottom: 11px;
+	}
+	.fact-slider {
+		padding-top: 75px;
+		padding-bottom: 75px;
 	}
 }
 .television-img {
@@ -2380,6 +2401,31 @@ label.error {
 	color: $menu-subtitle;
 	font-weight: 600;
 	text-align: center;
+}
+.affiche-title_with-line {
+	position: relative;
+	padding-bottom: 25px;
+	margin-bottom: 57px;
+	&::before {
+		content: "";
+		display: block;
+		width: 69px;
+		height: 4px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $dots-color;
+	}
+}
+.affiche-block {
+	margin-top: 38px;
+}
+.affiche-block .affiche-title {
+	margin-bottom: 4px;
+}
+.affiche-epilogue .slider-paragraph {
+	font-weight: 600;
 }
 
 
