@@ -2542,6 +2542,31 @@ label.error {
 		margin-right: 40px;
 	}
 }
+.about-wrapper {
+	display: flex;
+	align-items: flex-start;
+}
+.furniture {
+	width: 32.7%;
+	flex-shrink: 0;
+}
+.about-text {
+	width: 31.6%;
+	flex-shrink: 0;
+	background-color: $btn-color;
+}
+.about-text__title {
+	color: $btn-header-color;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 1;
+}
+.about-text__paragraphs p {
+	color: #d3d3d3;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
 
 
 @import "animation";

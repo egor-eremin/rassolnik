@@ -4760,6 +4760,42 @@ label.error {
   .additional-buttons .slick-prev {
     margin-right: 40px; }
 
+.about-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.furniture {
+  width: 32.7%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+
+.about-text {
+  width: 31.6%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  background-color: #3a3b41; }
+
+.about-text__title {
+  color: #f7d1aa;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1; }
+
+.about-text__paragraphs p {
+  color: #d3d3d3;
+  font-size: 14px;
+  line-height: 1.7; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }
