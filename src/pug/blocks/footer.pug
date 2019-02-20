@@ -76,7 +76,7 @@ mixin footer-content
 							a(href="#") Контакты
 				.separate-line
 				.address-block
-					.address-block__item
+					a(href="contacts.html").address-block__item
 						| <svg aria-hidden="true" version="1.1" width="16" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						|      viewBox="0 0 10.5 13.5" style="enable-background:new 0 0 10.5 13.5;" xml:space="preserve">
 						| <style type="text/css">
@@ -95,7 +95,8 @@ mixin footer-content
 						|     </g>
 						| </g>
 						| </svg>
-						| Иркутск, ул. 3 июля, ст. 3
+						span
+							| Иркутск, ул. 3 июля, ст. 3
 					a(href="tel:83952506180").address-block__item
 						| <svg aria-hidden="true" version="1.1" width="11" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						|      viewBox="0 0 7.4 17.1" style="enable-background:new 0 0 7.4 17.1;" xml:space="preserve">

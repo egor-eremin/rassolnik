@@ -430,14 +430,18 @@ $(document).ready(function () {
 
   (function initInteriorGallery() {
     if ($('.interior-list').length > 0) {
-      $('.interior-list').magnificPopup({
-        delegate: '.interior-list__item',
-        type: 'image',
-        mainClass: 'hall-gallery',
-        gallery: {
-          enabled: true,
-          tCounter: '%curr% из %total%'
-        }
+      $('.interior-list__item').on('click', function (events) {
+        events.preventDefault();
+        var gallery = $(this).attr('href');
+        $(gallery).magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          mainClass: 'hall-gallery',
+          gallery: {
+            enabled: true,
+            tCounter: '%curr% из %total%'
+          }
+        }).magnificPopup('open');
       });
     }
   })();
@@ -452,7 +456,7 @@ $(document).ready(function () {
         }, {
           searchControlProvider: 'yandex#search'
         }),
-            MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="custom-baloon">' + '<div class="custom-baloon__logo">' + '<img src="images/baloon-logo.png" alt="Логотип">' + '</div>' + '<div class="custom-baloon__address">' + '<div class="custom-baloon__address-item">' + 'Иркутск, ул. 3 июля, ст. 3' + '</div>' + '<div class="custom-baloon__address-item">' + '<a href="tel:83952506180">8 (3952) 506-180</a>' + '</div>' + '<div class="custom-baloon__address-item">' + '<a href="mailto:example@irk.ru">example@irk.ru</a>' + '</div>' + '</div>' + '</div>'),
+            MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="custom-baloon">' + '<div class="custom-baloon__logo">' + '<img src="images/baloon-logo.png" alt="Логотип">' + '</div>' + '<div class="custom-baloon__address">' + '<div class="custom-baloon__address-item baloon-address">' + 'Иркутск, ул. 3 июля, ст. 3' + '</div>' + '<div class="custom-baloon__address-item baloon-phone">' + '<a href="tel:83952506180">8 (3952) 506-180</a>' + '</div>' + '<div class="custom-baloon__address-item baloon-mail">' + '<a href="mailto:example@irk.ru">example@irk.ru</a>' + '</div>' + '</div>' + '</div>'),
             myPlacemark = window.myPlacemark = new ymaps.Placemark([52.2754, 104.2870], {
           balloonHeader: 'Заголовок балуна',
           balloonContent: 'Контент балуна'
@@ -460,9 +464,21 @@ $(document).ready(function () {
           balloonShadow: false,
           balloonLayout: MyBalloonLayout // offset: [-173,105],
 
+        }); // var zoomControl = new ymaps.control.ZoomControl({
+        // 	options: {
+        // 		position: "right"
+        // 	}
+        // });
+
+        myMap.controls.add('zoomControl', {
+          position: {
+            right: '40px',
+            top: '40px'
+          }
         });
         myMap.geoObjects.add(myPlacemark);
         myPlacemark.balloon.open();
+        myMap.behaviors.disable('scrollZoom');
       };
 
       ymaps.ready(init);
