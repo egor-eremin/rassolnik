@@ -2479,6 +2479,69 @@ label.error {
 		border-color: rgba(255,255,255,.7);
 	}
 }
+.affiche-prev-item {
+	display: flex !important;
+	align-items: flex-start;
+	padding-right: 25px;
+}
+.affiche-prev-item__title {
+	font-weight: 500;
+	font-size: 18px;
+	color: $menu-subtitle;
+	margin-bottom: 16px;
+	transition: .3s ease;
+}
+.affiche-prev-item__time {
+	font-size: 12px;
+	font-weight: 500;
+	color: $dish-description;
+}
+.affiche-prev-item__img {
+	width: 128px;
+	height: 128px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		font-family: 'object-fit: cover; object-position: center;';
+	}
+}
+.affiche-prev-slider {
+	margin-top: 96px;
+	padding-right: 126px;
+	padding-left: 126px;
+	margin-bottom: 76px;
+	.slick-arrow-page {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+	}
+	.slick-prev {
+		left: 34px;
+	}
+	.slick-next {
+		right: 34px;
+	}
+	.slick-current.slick-center .affiche-prev-item__title {
+		color: $dots-color;
+	}
+}
+.affiche-prev-item__text {
+	margin-top: 6px;
+	margin-left: 21px;
+}
+.additional-buttons {
+	position: absolute;
+	top: 36px;
+	right: 54%;
+	display: flex;
+	align-items: flex-start;
+	.slick-prev {
+		margin-right: 40px;
+	}
+}
 
 
 @import "animation";

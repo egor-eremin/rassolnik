@@ -4678,6 +4678,88 @@ label.error {
   .custom-baloon__address-item a:hover {
     border-color: rgba(255, 255, 255, 0.7); }
 
+.affiche-prev-item {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-right: 25px; }
+
+.affiche-prev-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #353c44;
+  margin-bottom: 16px;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  -moz-transition: .3s ease;
+  transition: .3s ease; }
+
+.affiche-prev-item__time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #adadad; }
+
+.affiche-prev-item__img {
+  width: 128px;
+  height: 128px; }
+  .affiche-prev-item__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    font-family: 'object-fit: cover; object-position: center;'; }
+
+.affiche-prev-slider {
+  margin-top: 96px;
+  padding-right: 126px;
+  padding-left: 126px;
+  margin-bottom: 76px; }
+  .affiche-prev-slider .slick-arrow-page {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0; }
+  .affiche-prev-slider .slick-prev {
+    left: 34px; }
+  .affiche-prev-slider .slick-next {
+    right: 34px; }
+  .affiche-prev-slider .slick-current.slick-center .affiche-prev-item__title {
+    color: #cc4e21; }
+
+.affiche-prev-item__text {
+  margin-top: 6px;
+  margin-left: 21px; }
+
+.additional-buttons {
+  position: absolute;
+  top: 36px;
+  right: 54%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .additional-buttons .slick-prev {
+    margin-right: 40px; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }

@@ -19,7 +19,7 @@ $(document).ready(function () {
 		}
 	})();
 	(function initAboutSlider() {
-		if ($('.about-slider, .affiche__slider-block').length > 0) {
+		if ($('.about-slider').length > 0) {
 
 			$('.fact-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 				$('.switch-television').attr('data-switch-index', nextSlide);
@@ -352,6 +352,64 @@ $(document).ready(function () {
 			var badText = "Что-то пошло не так...<br>Мы обязательно это исправим";
 			var coolText = "Спасибо за заявку!<br>Наши менеджеры свяжутся с Вами в ближайшее время.";
 			validationForm('#validate-callback-contacts', coolText, badText);
+		}
+	})();
+	(function initAffiche() {
+		if ($('.affiche__slider-block').length > 0) {
+			$('.fact-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+				$('.switch-television').attr('data-switch-index', nextSlide);
+			});
+
+			$('.television-slider').slick({
+				fade: true,
+				arrows: false,
+				asNavFor: '.fact-slider, .affiche-prev-slider'
+			});
+
+			$('.fact-slider').slick({
+				fade: true,
+				arrows: false,
+				dots: true,
+				asNavFor: '.television-slider, .affiche-prev-slider'
+			});
+
+			$('.affiche-prev-slider').slick({
+				centerMode: true,
+				arrows: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				centerPadding: 0,
+				prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
+					'\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' +
+					'<style type="text/css">\n' +
+					'\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' +
+					'</style>\n' +
+					'<g>\n' +
+					'\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' +
+					'</g>\n' +
+					'</svg></button>',
+				nextArrow: '<button aria-label="следующий слайд" type="button" class="slick-next slick-arrow-page all-slick"><svg aria-hidden="true" width="7" height="12" version="1.1" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
+					'\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' +
+					'<style type="text/css">\n' +
+					'\t.path-arrow-next{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' +
+					'</style>\n' +
+					'<g>\n' +
+					'\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' +
+					'</g>\n' +
+					'</svg></button>',
+				asNavFor: '.fact-slider, .television-slider'
+			});
+
+		}
+	})();
+	(function transfusionSlick() {
+		if ($('.additional-buttons').length > 0) {
+			$('.slick-prev.additional-button').on('click', function () {
+				$('.affiche-prev-slider .slick-prev').trigger('click');
+			});
+			$('.slick-next.additional-button').on('click', function () {
+				$('.affiche-prev-slider .slick-next').trigger('click');
+			});
 		}
 	})();
 
