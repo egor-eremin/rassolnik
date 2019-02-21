@@ -534,7 +534,7 @@ $(document).ready(function () {
   })();
 
   (function initAboutSlider() {
-    if ($('.about-slider').length > 0) {
+    if ($('.about-page-slider').length > 0) {
       $('.js-about-slider').slick({
         fade: true,
         prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' + '</g>\n' + '</svg></button>',

@@ -413,7 +413,7 @@ $(document).ready(function () {
 		}
 	})();
 	(function initAboutSlider() {
-		if ($('.about-slider').length > 0) {
+		if ($('.about-page-slider').length > 0) {
 			$('.js-about-slider').slick({
 				fade: true,
 				prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +

@@ -4877,7 +4877,7 @@ label.error {
 .floor-lamp {
   position: absolute; }
 
-.about-slider {
+.about-page-slider {
   width: 35.7%;
   padding-bottom: 65px;
   padding-top: 97px; }
@@ -4992,6 +4992,53 @@ iframe {
 
 .reviews {
   margin-bottom: 300px; }
+
+.main-wrapper__404 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 25px;
+  margin-bottom: -78px; }
+
+.text-404 {
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #b69479;
+  -webkit-transform: translateY(-202px);
+     -moz-transform: translateY(-202px);
+      -ms-transform: translateY(-202px);
+       -o-transform: translateY(-202px);
+          transform: translateY(-202px);
+  max-width: 372px;
+  margin-left: 14px;
+  text-align: center; }
+
+.img-404 {
+  margin-left: 206px; }
+
+.btn-404 {
+  -webkit-transform: translateY(-180px);
+     -moz-transform: translateY(-180px);
+      -ms-transform: translateY(-180px);
+       -o-transform: translateY(-180px);
+          transform: translateY(-180px);
+  font-size: 18px;
+  margin-left: 14px; }
 
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
