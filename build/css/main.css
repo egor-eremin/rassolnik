@@ -4586,7 +4586,9 @@ label.error {
             transform: translateX(-50%); }
 
 .affiche {
-  padding-top: 25px; }
+  padding-top: 25px;
+  position: relative;
+  overflow: hidden; }
 
 .affiche__slider-block {
   display: -webkit-box;
@@ -5039,6 +5041,11 @@ iframe {
           transform: translateY(-180px);
   font-size: 18px;
   margin-left: 14px; }
+
+.affiche-background {
+  position: absolute;
+  top: 0;
+  right: 57%; }
 
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
