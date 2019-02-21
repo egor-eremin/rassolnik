@@ -3,11 +3,11 @@ mixin news-item
 	article.news-list__item
 		a(href="#").news-list__link
 			.news-list__preview-img
-				img(src='images/preview-img.jpg')
+				img(src='images/preview-img.jpg' alt="Новогодний рисунок")
 			.news-list__content-wrapper
 				h2.news-list__title
 					| Новогодний рисунок
-				time.news-list__date 1 января 2018
+				.news-list__date 1 января 2018
 				.news-list__text
 					p
 						| Мой любимый ресторан. Была здесь с
@@ -44,7 +44,7 @@ block content
 						li.breadcrumbs-list__item
 							a(href="#") Новости
 				h1.main-h1 Новости
-		section.news
+		.news
 			.main-wrapper
 				.subscription-instagram
 					.subscription-instagram__text-wrapper

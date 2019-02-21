@@ -4909,6 +4909,90 @@ label.error {
        -o-transform: translateX(-100%);
           transform: translateX(-100%); }
 
+.reviews-tablist {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-shadow: 0px 9px 17.46px 0.54px rgba(215, 185, 169, 0.34);
+     -moz-box-shadow: 0px 9px 17.46px 0.54px rgba(215, 185, 169, 0.34);
+          box-shadow: 0px 9px 17.46px 0.54px rgba(215, 185, 169, 0.34);
+  position: relative; }
+
+.reviews-block {
+  max-width: 993px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 81px;
+  -webkit-box-shadow: 0px 22px 28.13px 0.87px rgba(215, 185, 169, 0.74);
+     -moz-box-shadow: 0px 22px 28.13px 0.87px rgba(215, 185, 169, 0.74);
+          box-shadow: 0px 22px 28.13px 0.87px rgba(215, 185, 169, 0.74); }
+  .reviews-block iframe {
+    width: 100% !important; }
+
+.reviews-tablist__item {
+  width: -webkit-calc(100% / 3);
+  width: -moz-calc(100% / 3);
+  width: calc(100% / 3);
+  height: 78px; }
+  .reviews-tablist__item a {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #ffffff;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    -moz-transition: .3s ease;
+    transition: .3s ease; }
+
+.reviews-tablist__item a[tabindex="-1"] {
+  background: #f8f3ec; }
+
+.reviews-tablist__item a:hover {
+  background: #ffffff; }
+
+.reviews-tablist__item:nth-child(2) {
+  position: relative; }
+  .reviews-tablist__item:nth-child(2)::before, .reviews-tablist__item:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #e1dcd6; }
+  .reviews-tablist__item:nth-child(2)::after {
+    left: auto;
+    right: 0; }
+
+iframe {
+  vertical-align: top; }
+
+.reviews {
+  margin-bottom: 300px; }
+
 @-webkit-keyframes fadeInBackgroundMain {
   0% {
     opacity: 0; }
