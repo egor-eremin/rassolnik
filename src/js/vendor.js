@@ -5,6 +5,7 @@ import 'slick-carousel';
 import 'magnific-popup';
 import 'jquery-validation';
 import 'jquery-mask-plugin';
+import 'select2';
 import objectFitImages from 'object-fit-images';
 
 objectFitImages();

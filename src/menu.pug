@@ -2,7 +2,7 @@ extends pug/base
 
 append vars
 	- title = "Рассольник"
-	- meta.viewport = "width=480, initial-scale=1"
+	- meta.viewport = "width=device-width, initial-scale=1"
 
 block content
 	include pug/blocks/header
@@ -245,6 +245,13 @@ block content
 								| </svg>
 								|
 							.category-menu-text Детское меню
+				.mobile-category-menu
+					select.mobile-select.js-mobile-select-init(name="category-menu")
+						option.mobile-select__item(name="main-menu" data-link="main-rest-menu") Основное меню
+						option.mobile-select__item(name="farmer-menu" data-link="farm-menu") Фермерское меню
+						option.mobile-select__item(name="banquets" data-link="banquets") Банкеты
+						option.mobile-select__item(name="business-lunch" data-link="business-lunch") Бизнес ланчи
+						option.mobile-select__item(name="children-menu" data-link="childrens-menu") Детское меню
 		.restaurant-menu
 			.main-wrapper.wrapper-menu
 				.restaurant-menu-wrapper

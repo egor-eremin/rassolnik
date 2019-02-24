@@ -917,7 +917,7 @@ label.error {
 	overflow: auto;
 	visibility: hidden;
 	opacity: 0;
-	transition: .3s ease;
+	transition: 0s ease;
 	display: none;
 	align-items: center;
 	flex-direction: column;
@@ -926,6 +926,7 @@ label.error {
 .burger-for-nav.active ~ .mobile-menu {
 	visibility: visible;
 	opacity: 1;
+	transition-delay: .3s;
 }
 .mobile-nav-list {
 	text-align: center;
@@ -1158,6 +1159,7 @@ label.error {
 	color: $main-menu-color;
 	font-size: 16px;
 	transition: .3s ease;
+	text-align: center;
 }
 .restaurant-menu-wrapper {
 	padding-left: 23%;
@@ -1317,6 +1319,7 @@ label.error {
 	color: $form-placeholder;
 	font-weight: 700;
 	font-size: 14px;
+	flex-shrink: 0;
 }
 .dish-weight {
 	font-size: 12px;
@@ -1451,6 +1454,7 @@ label.error {
 	padding-right: 0;
 	padding-left: 0;
 	position: relative;
+	//overflow: hidden;
 }
 .banquets-description {
 	width: 43%;
@@ -1476,6 +1480,7 @@ label.error {
 }
 .banquets {
 	background: $menu-background;
+	overflow: hidden;
 }
 .title-content {
 	font-weight: 500;
@@ -2754,6 +2759,127 @@ iframe {
 	top: 0;
 	right: 57%;
 }
-
+.select2-search {
+	display: none;
+}
+.mobile-category-menu {
+	position: relative;
+	display: none;
+	z-index: 2;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.select2-container--open:not(.select2-container--focus) {
+	bottom: 0;
+	top: auto !important;
+	transform: translateY(100%);
+	width: 100%;
+}
+.select2-selection--single {
+	//width: 294px;
+	width: 100%;
+	background-color: $btn-color !important;
+	height: 54px !important;
+	border-radius: 27px !important;
+}
+.select2-selection__rendered {
+	font-weight: 700;
+	color: #ffffff !important;
+	font-size: 16px;
+	height: 100%;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	padding: 0 40px 0 0 !important;
+	width: 100%;
+	&[title="Основное меню"]::before {
+		background: url("../images/catalog-item1.svg") no-repeat center;
+		background-size: 100% auto;
+	}
+	&[title="Фермерское меню"]::before {
+		background: url("../images/catalog-item2.svg") no-repeat center;
+		background-size: 100% auto;
+	}
+	&[title="Банкеты"]::before {
+		background: url("../images/catalog-item3.svg") no-repeat center;
+		background-size: 100% auto;
+	}
+	&[title="Бизнес ланчи"]::before {
+		background: url("../images/catalog-item4.svg") no-repeat center;
+		background-size: 100% auto;
+	}
+	&[title="Детское меню"]::before {
+		background: url("../images/catalog-item5.svg") no-repeat center;
+		background-size: 100% auto;
+	}
+	&::before {
+		content: '';
+		width: 30px;
+		height: 100%;
+		margin-right: 15px;
+	}
+}
+.select2-container--default {
+	width: 294px !important;
+}
+.select2-container--open:not(.select2-container--below):not(.select2-container--above) {
+	width: 258px !important;
+	left: 50% !important;
+	transform: translate(-50%, 100%) !important;
+	margin-bottom: -20px;
+}
+.select2-selection__arrow b {
+	display: none;
+	position: static !important;
+}
+.select2-selection__arrow {
+	width: 7px !important;
+	height: 12px !important;
+	background: url("../images/arrow-select.svg") no-repeat center;
+	display: block;
+	transform: translate(0, -50%) rotate(-90deg);
+	right: 20px !important;
+	top: 50% !important;
+}
+.select2-selection--single {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	border: none !important;
+}
+.select2-container--default.select2-container--open .select2-selection__arrow {
+	transform: translate(0, -50%) rotate(90deg);
+}
+.select2-dropdown {
+	border-radius: 15px !important;
+	overflow: hidden;
+	position: static !important;
+	width: 100% !important;
+	border: none !important;
+	background: #ece3da;
+}
+.select2-container--below + .select2-container {
+	width: calc(100% - 36px) !important;
+	left: 50% !important;
+	transform: translate(-50%, 100%);
+	margin-bottom: -12px !important;
+}
+.select2-results__option {
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.875;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background: transparent;
+	color: $main-menu-color;
+	font-weight: 600;
+}
+.select2-results {
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.select2-container--default .select2-results > .select2-results__options {
+	max-height: none;
+}
 @import "animation";
 @import "media";
