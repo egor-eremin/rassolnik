@@ -521,7 +521,18 @@ $(document).ready(function () {
         centerPadding: 0,
         prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-slick{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-slick" points="3.8,7.1 0.5,3.8 3.8,0.5 \t"/>\n' + '</g>\n' + '</svg></button>',
         nextArrow: '<button aria-label="следующий слайд" type="button" class="slick-next slick-arrow-page all-slick"><svg aria-hidden="true" width="7" height="12" version="1.1" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' + '\t viewBox="0 0 4.3 7.6" style="enable-background:new 0 0 4.3 7.6;" xml:space="preserve">\n' + '<style type="text/css">\n' + '\t.path-arrow-next{fill:none;stroke:#cd501f;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' + '</style>\n' + '<g>\n' + '\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' + '</g>\n' + '</svg></button>',
-        asNavFor: '.fact-slider, .television-slider'
+        asNavFor: '.fact-slider, .television-slider',
+        responsive: [{
+          breakpoint: 801,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 641,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
       });
     }
   })();
@@ -569,6 +580,16 @@ $(document).ready(function () {
         $('.category-menu-link[href="#' + dateLink + '"]').trigger('click');
       });
     }
+  })();
+
+  (function goesToForm() {
+    $('.btn-order').on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('.callback-h ').offset().top - 30
+      }, 500);
+      $('#callback-h-name').focus();
+    });
   })();
 
   media('all and (min-width: 1201px)', function () {

@@ -403,7 +403,21 @@ $(document).ready(function () {
 					'\t<polyline class="path-arrow-next" points="0.5,7.1 3.8,3.8 0.5,0.5 "/>\n' +
 					'</g>\n' +
 					'</svg></button>',
-				asNavFor: '.fact-slider, .television-slider'
+				asNavFor: '.fact-slider, .television-slider',
+				responsive: [
+					{
+						breakpoint: 801,
+						settings: {
+							slidesToShow: 2,
+						}
+					},
+					{
+						breakpoint: 641,
+						settings: {
+							slidesToShow: 1,
+						}
+					},
+				]
 			});
 
 		}
@@ -465,7 +479,14 @@ $(document).ready(function () {
 			});
 		}
 	})();
+	(function goesToForm() {
+		$('.btn-order').on('click', function (e) {
+			e.preventDefault();
 
+			$('html, body').animate({ scrollTop: $('.callback-h ').offset().top - 30}, 500);
+			$('#callback-h-name').focus();
+		});
+	})();
 
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {
