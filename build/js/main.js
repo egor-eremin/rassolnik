@@ -483,6 +483,12 @@ $(document).ready(function () {
         myMap.geoObjects.add(myPlacemark);
         myPlacemark.balloon.open();
         myMap.behaviors.disable('scrollZoom');
+        media('all and (min-width: 1025px)', function () {
+          myMap.setCenter([52.2754, 104.2856]);
+        });
+        media('all and (max-width: 1024px)', function () {
+          myMap.setCenter([52.2754, 104.2870]);
+        });
       };
 
       ymaps.ready(init);
@@ -589,6 +595,12 @@ $(document).ready(function () {
         scrollTop: $('.callback-h ').offset().top - 30
       }, 500);
       $('#callback-h-name').focus();
+    });
+  })();
+
+  (function initBooking() {
+    $('.booking-button').on('click', function () {
+      $('.callback-btn').trigger('click');
     });
   })();
 

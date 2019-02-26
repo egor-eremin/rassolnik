@@ -350,6 +350,14 @@ $(document).ready(function () {
 				myPlacemark.balloon.open();
 				myMap.behaviors.disable('scrollZoom');
 
+
+				media ('all and (min-width: 1025px)', function () {
+					myMap.setCenter([52.2754,104.2856]);
+				})
+				media ('all and (max-width: 1024px)', function () {
+					myMap.setCenter([52.2754,104.2870]);
+				})
+
 			}
 		}
 	})();
@@ -487,6 +495,11 @@ $(document).ready(function () {
 			$('#callback-h-name').focus();
 		});
 	})();
+	(function initBooking() {
+		$('.booking-button').on('click', function () {
+			$('.callback-btn').trigger('click');
+		});
+	})();
 
 	media ('all and (min-width: 1201px)', function () {
 		if ($('.burger-for-nav').length > 0) {
@@ -497,6 +510,7 @@ $(document).ready(function () {
 			}
 		}
 	});
+
 });
 
 function switchSlider(activeTitle) {

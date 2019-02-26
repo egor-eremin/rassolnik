@@ -1287,7 +1287,7 @@ label.error {
 	}
 }
 .menu-title {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 21px;
 	line-height: 28px;
 	color: $form-placeholder;
@@ -1786,7 +1786,7 @@ label.error {
 	background: url("../images/background-news.jpg") no-repeat top;
 	background-size: cover;
 	position: relative;
-	padding: 19px 0;
+	padding: 22px 0;
 	&::before {
 		content: '';
 		width: 266px;
@@ -2436,7 +2436,7 @@ label.error {
 	.slider-paragraph {
 		text-align: center;
 		font-size: 14px;
-		line-height: 1.2;
+		line-height: 1.6;
 		color: $main-menu-color;
 		margin-bottom: 11px;
 	}
@@ -2452,7 +2452,7 @@ label.error {
 .affiche-title {
 	font-size: 18px;
 	color: $menu-subtitle;
-	font-weight: 600;
+	font-weight: 500;
 	text-align: center;
 }
 .affiche-title_with-line {
@@ -2520,10 +2520,10 @@ label.error {
 	}
 }
 .affiche-prev-slider {
-	margin-top: 96px;
+	margin-top: 75px;
 	padding-right: 126px;
 	padding-left: 126px;
-	margin-bottom: 76px;
+	margin-bottom: 150px;
 	.slick-arrow-page {
 		position: absolute;
 		top: 50%;
@@ -2618,7 +2618,8 @@ label.error {
 }
 .schedule__text-item {
 	display: flex;
-	align-items: baseline;
+	//align-items: baseline;
+	align-items: center;
 	margin-bottom: 15px;
 }
 .schedule__day {
@@ -2733,7 +2734,7 @@ iframe {
 	vertical-align: top;
 }
 .reviews {
-	margin-bottom: 300px;
+	margin-bottom: 200px;
 }
 .main-wrapper__404 {
 	display: flex;
