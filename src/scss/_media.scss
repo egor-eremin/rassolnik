@@ -87,7 +87,7 @@
 		left: 50%;
 	}
 	.about-main {
-		padding-bottom: 96px;
+		padding-bottom: 140px;
 	}
 	.address-block {
 		flex-direction: column;
@@ -285,11 +285,11 @@
 		text-align: center;
 	}
 	.btn-about {
-		margin-top: 48px;
+		margin-top: 35px;
 	}
 	.fact-slider .slick-dots {
 		top: auto;
-		bottom: -48px;
+		bottom: -42px;
 		left: 50%;
 		transform: translate(-50%, 100%);
 		flex-direction: row;
@@ -758,6 +758,17 @@
 	.subscription-instagram__text-wrapper {
 		margin-left: 297px;
 	}
+	.about-decor {
+		height: 28%;
+		picture {
+			height: 100%;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
+			font-family: 'object-fit: cover;';
+		}
+	}
 }
 @media (max-width: 640px) {
 	.slider-text {
@@ -1004,6 +1015,9 @@
 	}
 	.main-wrapper__404 {
 		margin-bottom: 80px;
+	}
+	.some-history-slider .slick-dots li button {
+		height: 8px;
 	}
 }
 @media (max-width: 480px) {

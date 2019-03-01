@@ -2458,7 +2458,6 @@ input:focus:-ms-input-placeholder {
   background: url("../images/background-history.jpg") center no-repeat;
   -webkit-background-size: 110% auto;
      -moz-background-size: 110% auto;
-       -o-background-size: 110% auto;
           background-size: 110% auto;
   width: 100%;
   height: 100%;
@@ -3470,7 +3469,6 @@ label.error {
     background: url("../images/menu-background.jpg") no-repeat center top;
     -webkit-background-size: cover;
        -moz-background-size: cover;
-         -o-background-size: cover;
             background-size: cover;
     -webkit-transform: translateX(-100%);
        -moz-transform: translateX(-100%);
@@ -3986,7 +3984,6 @@ label.error {
   background: url("../images/table-banquets.png") no-repeat center calc(100% + 1px);
   -webkit-background-size: -webkit-calc(100% - 30px) auto;
      -moz-background-size: -moz-calc(100% - 30px) auto;
-       -o-background-size: calc(100% - 30px) auto;
           background-size: calc(100% - 30px) auto;
   padding-bottom: 326px;
   position: relative;
@@ -4063,7 +4060,6 @@ label.error {
     background: url(../images/h1-bottom.svg) no-repeat;
     -webkit-background-size: 100% 100%;
        -moz-background-size: 100% 100%;
-         -o-background-size: 100% 100%;
             background-size: 100% 100%; }
 
 .banquets-menu {
@@ -4117,7 +4113,6 @@ label.error {
   background: url("../images/background-banquet.jpg") no-repeat center;
   -webkit-background-size: cover;
      -moz-background-size: cover;
-       -o-background-size: cover;
           background-size: cover;
   margin-bottom: 150px; }
 
@@ -4372,7 +4367,6 @@ label.error {
     background: url("../images/radio.png") no-repeat center;
     -webkit-background-size: contain;
        -moz-background-size: contain;
-         -o-background-size: contain;
             background-size: contain;
     display: block;
     position: absolute;
@@ -4417,7 +4411,6 @@ label.error {
   background: url("../images/background-news.jpg") no-repeat top;
   -webkit-background-size: cover;
      -moz-background-size: cover;
-       -o-background-size: cover;
           background-size: cover;
   position: relative;
   padding: 22px 0; }
@@ -4745,7 +4738,6 @@ label.error {
   background: url("../images/background-book.jpg") no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
-       -o-background-size: cover;
           background-size: cover;
   margin-top: 71px;
   padding: 73px 0 38px;
@@ -5743,31 +5735,26 @@ iframe {
     background: url("../images/catalog-item1.svg") no-repeat center;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .select2-selection__rendered[title="Фермерское меню"]::before {
     background: url("../images/catalog-item2.svg") no-repeat center;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .select2-selection__rendered[title="Банкеты"]::before {
     background: url("../images/catalog-item3.svg") no-repeat center;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .select2-selection__rendered[title="Бизнес ланчи"]::before {
     background: url("../images/catalog-item4.svg") no-repeat center;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .select2-selection__rendered[title="Детское меню"]::before {
     background: url("../images/catalog-item5.svg") no-repeat center;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .select2-selection__rendered::before {
     content: '';
@@ -6108,7 +6095,7 @@ iframe {
   .history-slider-image {
     left: 50%; }
   .about-main {
-    padding-bottom: 96px; }
+    padding-bottom: 140px; }
   .address-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6261,7 +6248,6 @@ iframe {
             transform: none;
     -webkit-background-size: cover;
        -moz-background-size: cover;
-         -o-background-size: cover;
             background-size: cover; }
   .television-slider-wrapper {
     width: 100%;
@@ -6319,10 +6305,10 @@ iframe {
   .fact-slider__item {
     text-align: center; }
   .btn-about {
-    margin-top: 48px; }
+    margin-top: 35px; }
   .fact-slider .slick-dots {
     top: auto;
-    bottom: -48px;
+    bottom: -42px;
     left: 50%;
     -webkit-transform: translate(-50%, 100%);
        -moz-transform: translate(-50%, 100%);
@@ -6539,7 +6525,6 @@ iframe {
   .banquets-description {
     -webkit-background-size: auto auto;
        -moz-background-size: auto;
-         -o-background-size: auto;
             background-size: auto;
     background: #ffffff url(../images/table-banquets.png) no-repeat center -webkit-calc(100% + 1px);
     background: #ffffff url(../images/table-banquets.png) no-repeat center -moz-calc(100% + 1px);
@@ -6868,10 +6853,18 @@ iframe {
     width: 218px;
     -webkit-background-size: 100% auto;
        -moz-background-size: 100% auto;
-         -o-background-size: 100% auto;
             background-size: 100% auto; }
   .subscription-instagram__text-wrapper {
-    margin-left: 297px; } }
+    margin-left: 297px; }
+  .about-decor {
+    height: 28%; }
+    .about-decor picture {
+      height: 100%; }
+    .about-decor img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      font-family: 'object-fit: cover;'; } }
 
 @media (max-width: 640px) {
   .slider-text {
@@ -7112,7 +7105,9 @@ iframe {
   .news-detail {
     margin-bottom: 65px; }
   .main-wrapper__404 {
-    margin-bottom: 80px; } }
+    margin-bottom: 80px; }
+  .some-history-slider .slick-dots li button {
+    height: 8px; } }
 
 @media (max-width: 480px) {
   .television-slider-wrapper {
