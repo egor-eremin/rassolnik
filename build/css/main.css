@@ -6060,7 +6060,11 @@ iframe {
   .main-img {
     height: 600px; }
   .about-main {
-    padding-bottom: 140px; } }
+    padding-bottom: 140px; }
+  .address-block__item {
+    font-size: 15px; }
+    .address-block__item svg {
+      margin-right: 8px; } }
 
 @media (max-width: 1200px) {
   .callback-btn_icon {
@@ -6237,7 +6241,11 @@ iframe {
     border-top: none;
     margin-top: 25px; }
   .news-detail {
-    border-top: none; } }
+    border-top: none; }
+  .address-block__item {
+    font-size: 16px; }
+    .address-block__item svg {
+      margin-right: 21px; } }
 
 @media (max-width: 1024px) {
   .background-history-wrapper__transform {
@@ -6437,7 +6445,7 @@ iframe {
     width: 50%; }
   .footer-col-2 {
     padding-left: 0;
-    width: 50%;
+    width: 90%;
     margin-top: 212px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -6833,7 +6841,7 @@ iframe {
   .restaurant-menu-category {
     padding: 30px 0; }
   .menu-content {
-    padding: 42px 0; }
+    padding: 60px 0; }
   .banquets-description, .banquets-menu {
     padding-left: 30px;
     padding-right: 30px; }
@@ -7221,7 +7229,9 @@ iframe {
             flex-direction: column; }
   .photo-hall__item {
     width: 100%;
-    margin-bottom: 68px; }
+    margin-bottom: 90px; }
+  .photo-hall__text {
+    padding-bottom: 37px; }
   .photo-hall {
     margin-bottom: 60px; }
   .menu-title-wrapper {
@@ -7240,7 +7250,8 @@ iframe {
   .pagination-list__item:not(.pagination-arrow) a {
     font-size: 17px; }
   .news {
-    margin-top: 0; }
+    margin-top: 0;
+    padding-top: 0; }
   .page-slider {
     height: 320px; }
   .news-detail {
@@ -7269,6 +7280,8 @@ iframe {
   .callback-form-wrapper_contacts {
     padding: 50px 15px 35px 15px; }
   .callback-form-wrapper_contacts .form-submit {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .menu-content__item {
+    margin-top: 30px; } }
 
 /*# sourceMappingURL=main.css.map */

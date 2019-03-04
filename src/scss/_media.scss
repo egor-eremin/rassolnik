@@ -39,6 +39,12 @@
 	.about-main {
 		padding-bottom: 140px;
 	}
+	.address-block__item {
+		font-size: 15px;
+		svg {
+			margin-right: 8px;
+		}
+	}
 }
 @media (max-width: 1200px) {
 	.callback-btn_icon {
@@ -231,6 +237,12 @@
 	.news-detail {
 		border-top: none;
 	}
+	.address-block__item {
+		font-size: 16px;
+		svg {
+			margin-right: 21px;
+		}
+	}
 }
 @media (max-width: 1024px) {
 	.background-history-wrapper__transform {
@@ -387,7 +399,7 @@
 	}
 	.footer-col-2 {
 		padding-left: 0;
-		width: 50%;
+		width: 90%;
 		margin-top: 212px;
 		display: flex;
 		align-items: center;
@@ -728,7 +740,7 @@
 		padding: 30px 0;
 	}
 	.menu-content {
-		padding: 42px 0;
+		padding: 60px 0;
 	}
 	.banquets-description, .banquets-menu {
 		padding-left: 30px;
@@ -1128,7 +1140,10 @@
 	}
 	.photo-hall__item {
 		width: 100%;
-		margin-bottom: 68px;
+		margin-bottom: 90px;
+	}
+	.photo-hall__text {
+		padding-bottom: 37px;
 	}
 	.photo-hall {
 		margin-bottom: 60px;
@@ -1151,6 +1166,7 @@
 	}
 	.news {
 		margin-top: 0;
+		padding-top: 0;
 	}
 	.page-slider {
 		height: 320px;
@@ -1185,5 +1201,8 @@
 	}
 	.callback-form-wrapper_contacts .form-submit {
 		font-size: 16px;
+	}
+	.menu-content__item {
+		margin-top: 30px;
 	}
 }
