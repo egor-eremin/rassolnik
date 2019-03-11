@@ -3,7 +3,10 @@ extends pug/base
 append vars
 	- title = "Рассольник"
 	- meta.viewport = "width=device-width, initial-scale=1"
-	//- ...
+
+append links
+	- link.appleTouchIcon180x180 = "/apple-touch-icon.png"
+	- link.
 
 block content
 	include pug/blocks/header
