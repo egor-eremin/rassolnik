@@ -2121,6 +2121,11 @@ label.error {
 	display: inline-flex !important;
 	justify-content: center;
 }
+.page-slider__item img {
+	object-fit: cover;
+	object-position: center;
+	font-family:'object-fit: cover; object-position: center;';
+}
 .content-slider {
 	position: relative;
 	margin-top: 47px;

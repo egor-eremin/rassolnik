@@ -168,6 +168,7 @@ $(document).ready(function () {
 	(function addMenuSlider() {
 		if ($('.restaurant-menu').length > 0) {
 			var currentSlider = $('.restaurant-subcategory.active a.active').data('slider');
+			// console.log('sdf');
 			initMenuSlider($('#' + currentSlider), '.page-slider-navigation', '.page-slider__current', '.page-slider__total');
 		}
 	})();
@@ -374,6 +375,12 @@ $(document).ready(function () {
 				$('.switch-television').attr('data-switch-index', nextSlide);
 			});
 
+			var slidesToShow = 3;
+			var childElements = $('.affiche-prev-slider').children().length;
+			if( slidesToShow > (childElements-1) ) {
+				slidesToShow = (childElements-1);
+			}
+
 			$('.television-slider').slick({
 				fade: true,
 				arrows: false,
@@ -390,7 +397,7 @@ $(document).ready(function () {
 			$('.affiche-prev-slider').slick({
 				centerMode: true,
 				arrows: true,
-				slidesToShow: 3,
+				slidesToShow: slidesToShow,
 				slidesToScroll: 1,
 				centerPadding: 0,
 				prevArrow: '<button aria-label="предыдущий слайд" type="button" class="slick-prev slick-arrow-page all-slick"><svg aria-hidden="true" version="1.1" width="7" height="12" class="svg-slick-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n' +
@@ -508,6 +515,23 @@ $(document).ready(function () {
 				$('.header-main').removeClass('fixed-position');
 				$('body').removeClass('scroll-no');
 			}
+		}
+	});
+
+	media ('all and (min-width: 901px)', function () {
+		if ($('.restaurant-menu').length > 0) {
+			var menuItemCount = $('.menu-content__list.active .menu-slider-item').length;
+
+			if (menuItemCount < 2) {
+				$('.restaurant-menu-wrapper .slider-pagination').hide();
+				$('.restaurant-menu-wrapper .page-slider-navigation').hide();
+			}
+
+			$('.category-menu-link').on('click', function () {
+
+			});
+
+			console.log(menuItemCount);
 		}
 	});
 

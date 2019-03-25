@@ -4832,6 +4832,13 @@ label.error {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.page-slider__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
+
 .content-slider {
   position: relative;
   margin-top: 47px;
